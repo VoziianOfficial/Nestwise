@@ -647,22 +647,30 @@ button.btn {
     gap: 10px;
 }
 
-.header-phone {
-    min-height: 44px;
-    padding: 12px 18px;
-    font-size: 0.84rem;
-}
-
-.mobile-call {
-    display: none;
+.header-icon-link {
+    display: grid;
     width: 43px;
     height: 43px;
     place-items: center;
     border: 1px solid rgba(74, 63, 53, 0.16);
     border-radius: 50%;
+    color: var(--color-heading);
+    background: rgba(255, 255, 255, 0.58);
+    box-shadow: 0 14px 28px rgba(31, 26, 21, 0.08);
+    transition:
+        transform var(--transition),
+        background var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition),
+        color var(--transition);
+}
+
+.header-icon-link:hover {
+    transform: translateY(-2px);
+    border-color: rgba(169, 139, 85, 0.38);
     color: var(--color-surface);
     background: var(--color-accent);
-    box-shadow: 0 14px 28px rgba(74, 63, 53, 0.18);
+    box-shadow: 0 18px 40px rgba(31, 26, 21, 0.12);
 }
 
 .menu-toggle {
@@ -1697,8 +1705,7 @@ select.form-control {
         --header-height: 74px;
     }
 
-    .desktop-nav,
-    .header-phone {
+    .desktop-nav {
         display: none;
     }
 
@@ -1711,7 +1718,7 @@ select.form-control {
         gap: 8px;
     }
 
-    .mobile-call,
+    .header-icon-link,
     .menu-toggle {
         display: grid;
     }
@@ -1854,7 +1861,7 @@ select.form-control {
         width: 100%;
     }
 
-    .header-actions .mobile-call,
+    .header-actions .header-icon-link,
     .header-actions .menu-toggle {
         width: 42px;
         height: 42px;

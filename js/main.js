@@ -211,12 +211,12 @@
                 </nav>
 
                 <div class="header-actions">
-                    <a class="btn btn-primary header-phone" href="tel:${config.phoneHref}" data-phone-link>
-                        <span data-phone-text>${config.phoneLabel}</span>
+                    <a class="header-icon-link" href="tel:${config.phoneHref}" data-phone-link aria-label="Call ${config.companyName}">
+                        <i data-lucide="phone"></i>
                     </a>
 
-                    <a class="mobile-call" href="tel:${config.phoneHref}" data-phone-link aria-label="Call ${config.companyName}">
-                        <i data-lucide="phone"></i>
+                    <a class="header-icon-link" href="mailto:${config.email}" aria-label="Email ${config.companyName}">
+                        <i data-lucide="mail"></i>
                     </a>
 
                     <button class="menu-toggle" type="button" data-menu-toggle aria-label="Open menu" aria-expanded="false">
