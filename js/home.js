@@ -39,12 +39,15 @@ function initReviewsSlider() {
 
     if (!slider) return;
 
+    const slideCount = slider.querySelectorAll(".swiper-slide").length;
+
     new Swiper(".reviews-swiper", {
         slidesPerView: 1,
         spaceBetween: 16,
         speed: 760,
-        loop: true,
+        loop: slideCount > 2,
         grabCursor: true,
+        watchOverflow: true,
 
         pagination: {
             el: ".reviews-pagination",
@@ -63,7 +66,7 @@ function initReviewsSlider() {
             },
 
             1100: {
-                slidesPerView: 3,
+                slidesPerView: 2,
                 spaceBetween: 18
             }
         }
@@ -166,4 +169,154 @@ function refreshHomeIcons() {
     if (window.lucide && typeof window.lucide.createIcons === "function") {
         window.lucide.createIcons();
     }
+}
+
+
+/* =========================
+   PATHWAYS AUTO SLIDESHOW
+   ========================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+    initPathwaysSlideshow();
+});
+
+function initPathwaysSlideshow() {
+    const slider = document.querySelector("[data-pathways-slider]");
+
+    if (!slider) return;
+
+    const images = Array.from(slider.querySelectorAll("[data-pathway-image]"));
+    const routeCards = Array.from(document.querySelectorAll("[data-pathway-route]"));
+    const progressItems = Array.from(slider.querySelectorAll(".pathways-slider-progress span"));
+
+    const numberElement = slider.querySelector("[data-pathway-current-number]");
+    const kickerElement = slider.querySelector("[data-pathway-kicker]");
+    const titleElement = slider.querySelector("[data-pathway-title]");
+    const textElement = slider.querySelector("[data-pathway-text]");
+    const linkElement = slider.querySelector("[data-pathway-link]");
+
+    if (!images.length || !numberElement || !kickerElement || !titleElement || !textElement || !linkElement) return;
+
+    const slides = [
+        {
+            number: "01",
+            kicker: "Most common starting point",
+            title: "Attic Wildlife Activity",
+            text: "For scratching sounds, droppings, insulation disturbance, odor, or suspected entry from roofline, soffit, or vent areas.",
+            href: "attic-wildlife.html",
+            link: "View attic matching path"
+        },
+        {
+            number: "02",
+            kicker: "Exterior activity signs",
+            title: "Raccoon Activity Requests",
+            text: "For roofline activity, vent access, deck openings, exterior damage signs, or attic-related movement concerns.",
+            href: "raccoon-activity.html",
+            link: "View raccoon matching path"
+        },
+        {
+            number: "03",
+            kicker: "Entry-point concerns",
+            title: "Squirrel Entry Concerns",
+            text: "For small gaps, chewing signs, fast attic sounds, roof access, soffit concerns, or tree-to-home movement paths.",
+            href: "squirrel-entry.html",
+            link: "View squirrel matching path"
+        },
+        {
+            number: "04",
+            kicker: "Specialized matching",
+            title: "Bird & Bat Concerns",
+            text: "For vents, chimneys, eaves, droppings, odor, seasonal activity, or provider questions around local requirements.",
+            href: "bird-bat-concerns.html",
+            link: "View bird & bat path"
+        }
+    ];
+
+    let currentIndex = 0;
+    let timerId = null;
+    const delay = 4200;
+
+    function setActiveSlide(index) {
+        currentIndex = index;
+
+        slider.classList.add("is-changing");
+
+        setTimeout(() => {
+            images.forEach((image, imageIndex) => {
+                image.classList.toggle("is-active", imageIndex === index);
+            });
+
+            routeCards.forEach((card) => {
+                const cardIndex = Number(card.getAttribute("data-pathway-route"));
+                card.classList.toggle("is-featured", cardIndex === index);
+            });
+
+            progressItems.forEach((item, itemIndex) => {
+                item.classList.remove("is-active");
+
+                if (itemIndex === index) {
+                    void item.offsetWidth;
+                    item.classList.add("is-active");
+                }
+            });
+
+            const slide = slides[index];
+
+            numberElement.textContent = slide.number;
+            kickerElement.textContent = slide.kicker;
+            titleElement.textContent = slide.title;
+            textElement.textContent = slide.text;
+            linkElement.setAttribute("href", slide.href);
+            linkElement.childNodes[0].nodeValue = `${slide.link} `;
+
+            slider.classList.remove("is-changing");
+        }, 180);
+    }
+
+    function nextSlide() {
+        const nextIndex = (currentIndex + 1) % slides.length;
+        setActiveSlide(nextIndex);
+    }
+
+    function startSlider() {
+        stopSlider();
+        timerId = window.setInterval(nextSlide, delay);
+    }
+
+    function stopSlider() {
+        if (timerId) {
+            window.clearInterval(timerId);
+            timerId = null;
+        }
+    }
+
+    routeCards.forEach((card) => {
+        card.addEventListener("mouseenter", () => {
+            const index = Number(card.getAttribute("data-pathway-route"));
+
+            if (Number.isNaN(index)) return;
+
+            stopSlider();
+            setActiveSlide(index);
+        });
+
+        card.addEventListener("mouseleave", startSlider);
+
+        card.addEventListener("focus", () => {
+            const index = Number(card.getAttribute("data-pathway-route"));
+
+            if (Number.isNaN(index)) return;
+
+            stopSlider();
+            setActiveSlide(index);
+        });
+
+        card.addEventListener("blur", startSlider);
+    });
+
+    slider.addEventListener("mouseenter", stopSlider);
+    slider.addEventListener("mouseleave", startSlider);
+
+    setActiveSlide(0);
+    startSlider();
 }

@@ -295,28 +295,28 @@ p {
     padding-top: var(--header-height);
 }
 
-.container,
-.container-wide {
+.container {
     width: min(100% - 32px, var(--container));
     margin-inline: auto;
 }
 
 .container-wide {
-    width: min(100% - 32px, var(--container-wide));
+    width: min(100%, var(--container-wide));
+    margin-inline: auto;
 }
 
 .section {
     position: relative;
-    padding: 0 0 clamp(54px, 6vw, 92px);
+    padding: 0 0 clamp(27px, 3vw, 46px);
 }
 
 .section-sm {
     position: relative;
-    padding: 0 0 clamp(38px, 5vw, 70px);
+    padding: 0 0 clamp(19px, 2.5vw, 35px);
 }
 
 .page-hero {
-    padding: clamp(42px, 6vw, 74px) 0 clamp(48px, 6vw, 82px);
+    padding: clamp(42px, 6vw, 74px) 0 clamp(24px, 3vw, 41px);
 }
 
 .grid-2 {
@@ -1736,9 +1736,12 @@ select.form-control {
         opacity: 0.13;
     }
 
-    .container,
-    .container-wide {
+    .container {
         width: min(100% - 24px, var(--container));
+    }
+
+    .container-wide {
+        width: min(100%, var(--container-wide));
     }
 
     .main {
@@ -1864,4 +1867,27 @@ select.form-control {
     .policy-consent-actions {
         grid-template-columns: 1fr;
     }
+}
+/* ==========================================================
+   GLOBAL H2 TYPOGRAPHY REFINEMENT
+   lighter, more editorial, more spacious
+   ========================================================== */
+
+h2 {
+    font-weight: 500 !important;
+    letter-spacing: -0.025em !important;
+    line-height: 1.04;
+}
+
+/* если крупные h2 слишком массивные в hero-like секциях */
+.section h2,
+.section-sm h2 {
+    font-weight: 500 !important;
+    letter-spacing: -0.025em !important;
+}
+
+/* h3 можно оставить чуть плотнее, чтобы карточки читались */
+h3 {
+    font-weight: 600;
+    letter-spacing: -0.025em;
 }
