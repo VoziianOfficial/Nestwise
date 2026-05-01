@@ -30,379 +30,400 @@
     <div class="mobile-menu" data-mobile-menu aria-hidden="true"></div>
 
     <main class="main" id="main">
-        <!-- =========================
-             SERVICES HERO
-        ========================== -->
-        <section class="services-hero page-hero">
-            <div class="container-wide">
-                <div class="services-hero-layout">
-                    <div class="services-hero-content" data-aos="fade-right">
-                        <span class="section-kicker">Service categories</span>
+<!-- =========================
+     SERVICES HERO — FULL BG + AUTO SLIDER
+========================== -->
+<section class="services-hero services-hero-v2 page-hero">
+    <div class="services-hero-bg-slider" aria-hidden="true" data-service-bg-slider>
+        <span class="services-hero-bg-slide services-bg-1 is-active"></span>
+        <span class="services-hero-bg-slide services-bg-2"></span>
+        <span class="services-hero-bg-slide services-bg-3"></span>
+        <span class="services-hero-bg-slide services-bg-4"></span>
+        <span class="services-hero-bg-slide services-bg-5"></span>
+        <span class="services-hero-bg-slide services-bg-6"></span>
+    </div>
+    <div class="container-wide">
+        <div class="services-hero-shell">
+            <div class="services-hero-top">
+                <div class="services-hero-content" data-aos="fade-right">
+                    <span class="section-kicker">Service categories</span>
 
-                        <h1>Wildlife requests shaped for clearer provider comparison.</h1>
+                    <h1>Wildlife requests shaped for clearer provider comparison.</h1>
 
-                        <p>
-                            Nestwise organizes common home wildlife concerns into focused request paths so homeowners
-                            can compare independent local provider options with better context and fewer scattered
-                            calls.
-                        </p>
+                    <p>
+                        Nestwise organizes common home wildlife concerns into focused request paths so homeowners can
+                        compare independent local provider options with better context and fewer scattered calls.
+                    </p>
 
-                        <div class="services-hero-actions">
-                            <a class="btn btn-primary" href="contact.html">Request matching</a>
-                            <a class="btn btn-secondary" href="#serviceCategories">View categories</a>
-                        </div>
+                    <div class="services-hero-actions">
+                        <a class="btn btn-primary" href="contact.html">Request matching</a>
+                        <a class="btn btn-secondary" href="#serviceCategories">View categories</a>
                     </div>
 
-                    <div class="services-hero-panel" data-aos="fade-left">
-                        <div class="services-hero-image">
-                            <img src="./assets/images/services/services-hero.jpg"
-                                alt="Quiet home exterior surrounded by natural trees">
-                        </div>
-
-                        <div class="services-hero-note">
-                            <span>Important</span>
-                            <p>
-                                Nestwise does not perform wildlife removal services directly. Contractors and providers
-                                are independent, and homeowners should verify licenses, insurance, qualifications, and
-                                local requirements before hiring.
-                            </p>
-                        </div>
+                    <div class="services-hero-tags">
+                        <span>Independent platform</span>
+                        <span>Provider availability may vary</span>
+                        <span>Homeowners verify before hiring</span>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- =========================
-             SERVICE CATEGORY CARDS
-        ========================== -->
-        <section class="services-categories section" id="serviceCategories">
-            <div class="container-wide">
-                <div class="section-split-head">
-                    <div data-aos="fade-up">
-                        <span class="section-kicker">Compare by concern</span>
-                        <h2>Choose the request path that best matches what you are noticing.</h2>
+                <div class="services-hero-side" data-aos="fade-left">
+                    <div class="services-hero-side-line">
+                        <span class="services-hero-side-label">Service index</span>
+                        <strong>06 visual request paths</strong>
                     </div>
 
-                    <p data-aos="fade-up" data-aos-delay="100">
-                        Each category is written for provider matching, not direct service claims. The goal is to help
-                        homeowners describe the concern clearly and compare available independent options.
+                    <p>
+                        Nestwise does not perform wildlife removal services directly. Providers and contractors are
+                        independent, and homeowners should verify qualifications, insurance, and service scope before
+                        hiring.
                     </p>
                 </div>
+            </div>
 
-                <div class="services-grid">
-                    <article class="service-feature-card service-feature-card-tall" data-aos="fade-up">
-                        <a href="attic-wildlife.html" class="service-feature-link">
-                            <div class="service-feature-media">
-                                <img src="./assets/images/services/attic-wildlife.jpg"
-                                    alt="Attic area related to wildlife activity matching">
-                            </div>
-
-                            <div class="service-feature-content">
-                                <span class="service-index">01</span>
-                                <span class="service-chip">
-                                    <i data-lucide="home"></i>
-                                    Attic concerns
-                                </span>
-
+            <div class="services-hero-slider-wrap" data-aos="fade-up" data-aos-delay="120">
+                <div class="services-hero-slider" data-service-slider>
+                    <div class="services-hero-track" data-service-slider-track>
+                        <a href="attic-wildlife.html" class="service-slide-card">
+                            <img src="./assets/images/services/attic-wildlife.jpg"
+                                alt="Attic wildlife activity request category">
+                            <span class="service-slide-icon">
+                                <i data-lucide="home"></i>
+                            </span>
+                            <div class="service-slide-copy">
+                                <small>Attic concerns</small>
                                 <h3>Attic Wildlife Activity</h3>
-
-                                <p>
-                                    Compare provider options for scratching sounds, droppings, insulation disturbance,
-                                    odor, or possible attic entry points.
-                                </p>
-
-                                <span class="service-arrow">View category</span>
                             </div>
                         </a>
-                    </article>
 
-                    <article class="service-feature-card" data-aos="fade-up" data-aos-delay="80">
-                        <a href="raccoon-activity.html" class="service-feature-link">
-                            <div class="service-feature-media">
-                                <img src="./assets/images/services/raccoon-activity.jpg"
-                                    alt="Roofline area related to raccoon activity concerns">
-                            </div>
-
-                            <div class="service-feature-content">
-                                <span class="service-index">02</span>
-                                <span class="service-chip">
-                                    <i data-lucide="paw-print"></i>
-                                    Exterior signs
-                                </span>
-
-                                <h3>Raccoon Activity Requests</h3>
-
-                                <p>
-                                    Request matching for signs around rooflines, vents, attics, decks, or exterior entry
-                                    areas.
-                                </p>
-
-                                <span class="service-arrow">View category</span>
+                        <a href="raccoon-activity.html" class="service-slide-card">
+                            <img src="./assets/images/services/raccoon-activity.jpg"
+                                alt="Raccoon activity request category">
+                            <span class="service-slide-icon">
+                                <i data-lucide="paw-print"></i>
+                            </span>
+                            <div class="service-slide-copy">
+                                <small>Exterior signs</small>
+                                <h3>Raccoon Activity</h3>
                             </div>
                         </a>
-                    </article>
 
-                    <article class="service-feature-card" data-aos="fade-up" data-aos-delay="140">
-                        <a href="squirrel-entry.html" class="service-feature-link">
-                            <div class="service-feature-media">
-                                <img src="./assets/images/services/squirrel-entry.jpg"
-                                    alt="Roof and tree access related to squirrel entry concerns">
-                            </div>
-
-                            <div class="service-feature-content">
-                                <span class="service-index">03</span>
-                                <span class="service-chip">
-                                    <i data-lucide="trees"></i>
-                                    Entry points
-                                </span>
-
-                                <h3>Squirrel Entry Point Concerns</h3>
-
-                                <p>
-                                    Compare local provider options for fast attic sounds, chewing signs, roofline
-                                    access,
-                                    or small exterior gaps.
-                                </p>
-
-                                <span class="service-arrow">View category</span>
+                        <a href="squirrel-entry.html" class="service-slide-card">
+                            <img src="./assets/images/services/squirrel-entry.jpg"
+                                alt="Squirrel entry concern request category">
+                            <span class="service-slide-icon">
+                                <i data-lucide="trees"></i>
+                            </span>
+                            <div class="service-slide-copy">
+                                <small>Entry points</small>
+                                <h3>Squirrel Entry</h3>
                             </div>
                         </a>
-                    </article>
 
-                    <article class="service-feature-card service-feature-card-wide" data-aos="fade-up"
-                        data-aos-delay="200">
-                        <a href="bird-bat-concerns.html" class="service-feature-link">
-                            <div class="service-feature-media">
-                                <img src="./assets/images/services/bird-bat-concerns.jpg"
-                                    alt="Vent and roofline area related to bird and bat concerns">
-                            </div>
-
-                            <div class="service-feature-content">
-                                <span class="service-index">04</span>
-                                <span class="service-chip">
-                                    <i data-lucide="feather"></i>
-                                    Specialized matching
-                                </span>
-
-                                <h3>Bird & Bat Concern Matching</h3>
-
-                                <p>
-                                    Request provider options for vents, rooflines, chimneys, droppings, odor, or
-                                    seasonal activity concerns.
-                                </p>
-
-                                <span class="service-arrow">View category</span>
+                        <a href="bird-bat-concerns.html" class="service-slide-card">
+                            <img src="./assets/images/services/bird-bat-concerns.jpg"
+                                alt="Bird and bat concern request category">
+                            <span class="service-slide-icon">
+                                <i data-lucide="feather"></i>
+                            </span>
+                            <div class="service-slide-copy">
+                                <small>Specialized matching</small>
+                                <h3>Bird & Bat Concerns</h3>
                             </div>
                         </a>
-                    </article>
-                </div>
-            </div>
-        </section>
 
-        <!-- =========================
-             MATCHING PROCESS
-        ========================== -->
-        <section class="services-process section">
-            <div class="container-wide">
-                <div class="process-panel">
-                    <div class="process-intro" data-aos="fade-right">
-                        <span class="section-kicker">Provider matching flow</span>
-                        <h2>One request, better context, clearer comparison.</h2>
-                        <p>
-                            Wildlife concerns can be hard to describe. Nestwise keeps the first step structured so
-                            independent providers can better understand what the homeowner is noticing.
-                        </p>
+                        <a href="raccoon-activity.html" class="service-slide-card">
+                            <img src="./assets/images/services/bird.jpg"
+                                alt="Roofline wildlife request category">
+                            <span class="service-slide-icon">
+                                <i data-lucide="scan-search"></i>
+                            </span>
+                            <div class="service-slide-copy">
+                                <small>Birds & bats</small>
+                                <h3>Roofline Activity</h3>
+                            </div>
+                        </a>
 
-                        <a class="btn btn-primary" href="contact.html">Start request</a>
-                    </div>
-
-                    <div class="process-steps">
-                        <article data-aos="fade-up">
-                            <span>01</span>
-                            <h3>Identify the concern</h3>
-                            <p>
-                                Choose attic activity, raccoon signs, squirrel entry concerns, or bird and bat-related
-                                matching.
-                            </p>
-                        </article>
-
-                        <article data-aos="fade-up" data-aos-delay="80">
-                            <span>02</span>
-                            <h3>Add location details</h3>
-                            <p>
-                                ZIP code and service area information help determine whether local provider options may
-                                be available.
-                            </p>
-                        </article>
-
-                        <article data-aos="fade-up" data-aos-delay="140">
-                            <span>03</span>
-                            <h3>Compare providers</h3>
-                            <p>
-                                Review provider communication, availability, estimate details, service scope, and
-                                qualifications.
-                            </p>
-                        </article>
-
-                        <article data-aos="fade-up" data-aos-delay="200">
-                            <span>04</span>
-                            <h3>Verify before hiring</h3>
-                            <p>
-                                Confirm licenses, insurance, local requirements, written estimates, and any relevant
-                                wildlife regulations.
-                            </p>
-                        </article>
+                        <a href="bird-bat-concerns.html" class="service-slide-card">
+                            <img src="./assets/images/services/bird-2.jpg"
+                                alt="Vent and chimney wildlife request category">
+                            <span class="service-slide-icon">
+                                <i data-lucide="circle-alert"></i>
+                            </span>
+                            <div class="service-slide-copy">
+                                <small>Vents & chimneys</small>
+                                <h3>Vent / Chimney Concerns</h3>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
-        <!-- =========================
-             EVALUATION SECTION
-        ========================== -->
-        <section class="services-evaluation section">
-            <div class="container">
-                <div class="evaluation-layout">
-                    <div class="evaluation-card dark-panel" data-aos="fade-right">
-                        <span class="section-kicker">What to compare</span>
-                        <h2>Provider fit is more than a quick price.</h2>
+<!-- =========================
+     SERVICE CATEGORY INDEX
+========================== -->
+<section class="services-categories services-index section" id="serviceCategories">
+    <div class="container-wide">
+        <div class="services-index-head">
+            <span class="section-kicker">Compare by concern</span>
 
-                        <p>
-                            Wildlife-related requests can involve inspection, exclusion, repairs, cleanup, seasonal
-                            timing, or local legal requirements. Homeowners should compare the full service scope before
-                            choosing a provider.
-                        </p>
-                    </div>
+            <div class="services-index-head-grid">
+            <h2>Choose the request path that best matches.</h2>
 
-                    <div class="evaluation-list" data-aos="fade-left">
-                        <article>
-                            <i data-lucide="clipboard-check"></i>
-                            <div>
-                                <h3>Written service scope</h3>
-                                <p>
-                                    Ask what is included in the estimate and whether inspection, prevention, cleanup, or
-                                    repairs are separate.
-                                </p>
-                            </div>
-                        </article>
+                <p>
+                    Each category is written for provider matching, not direct service claims. Nestwise does not
+                    perform wildlife removal services directly. Providers and contractors are independent, and
+                    homeowners should verify qualifications, insurance, and service scope before hiring.
+                </p>
+            </div>
+        </div>
 
-                        <article>
-                            <i data-lucide="shield-check"></i>
-                            <div>
-                                <h3>Licenses and insurance</h3>
-                                <p>
-                                    Homeowners should verify provider qualifications, coverage, and requirements for the
-                                    work being performed.
-                                </p>
-                            </div>
-                        </article>
+        <div class="services-index-layout">
+            <div class="services-index-photo" data-aos="fade-right">
+                <img src="./assets/images/services/attic-wildlife.jpg"
+                    alt="Quiet home wildlife concern matching preview">
 
-                        <article>
-                            <i data-lucide="map-pin"></i>
-                            <div>
-                                <h3>Local availability</h3>
-                                <p>
-                                    Provider coverage, scheduling, pricing, and service options can vary by ZIP code and
-                                    wildlife concern.
-                                </p>
-                            </div>
-                        </article>
-
-                        <article>
-                            <i data-lucide="file-text"></i>
-                            <div>
-                                <h3>Clear estimates</h3>
-                                <p>
-                                    Compare estimate format, inspection fees, follow-up visit details, and communication
-                                    before making a decision.
-                                </p>
-                            </div>
-                        </article>
-                    </div>
+                <div class="services-index-photo-label">
+                    <span>Provider matching paths</span>
+                    <strong>Organized by what homeowners notice first.</strong>
                 </div>
             </div>
-        </section>
 
-        <!-- =========================
-             ISSUE SWIPER
-        ========================== -->
-        <section class="services-slider-section section">
-            <div class="container-wide">
-                <div class="reviews-head">
-                    <div data-aos="fade-up">
-                        <span class="section-kicker">Common request details</span>
-                        <h2>Helpful details to include when requesting matching.</h2>
-                    </div>
+            <div class="services-index-list" data-aos="fade-left">
+                <a class="services-index-row" href="attic-wildlife.html">
+                    <span class="services-index-icon">
+                        <i data-lucide="home"></i>
+                    </span>
 
-                    <div class="slider-controls" data-aos="fade-up" data-aos-delay="100">
-                        <button class="slider-btn service-info-prev" type="button" aria-label="Previous detail">
-                            <i data-lucide="arrow-left"></i>
-                        </button>
+                    <span class="services-index-text">
+                        <small>Attic concerns</small>
+                        <strong>Attic Wildlife Activity</strong>
+                        <em>Scratching sounds, droppings, insulation disturbance, odor, or possible attic entry.</em>
+                    </span>
 
-                        <button class="slider-btn service-info-next" type="button" aria-label="Next detail">
-                            <i data-lucide="arrow-right"></i>
-                        </button>
-                    </div>
-                </div>
+                    <span class="services-index-arrow" aria-hidden="true">→</span>
+                </a>
 
-                <div class="swiper service-info-swiper" data-aos="fade-up">
-                    <div class="swiper-wrapper">
-                        <article class="swiper-slide info-slide">
-                            <span>Sounds</span>
-                            <h3>When and where activity is heard</h3>
-                            <p>
-                                Mention if sounds happen at night, early morning, near the attic, wall, roofline, vent,
-                                chimney, or crawl area.
-                            </p>
-                        </article>
+                <a class="services-index-row" href="raccoon-activity.html">
+                    <span class="services-index-icon">
+                        <i data-lucide="paw-print"></i>
+                    </span>
 
-                        <article class="swiper-slide info-slide">
-                            <span>Signs</span>
-                            <h3>Visible evidence around the home</h3>
-                            <p>
-                                Droppings, disturbed insulation, odor, stains, chewing marks, feathers, nesting
-                                material, or damaged vents may help providers understand the concern.
-                            </p>
-                        </article>
+                    <span class="services-index-text">
+                        <small>Exterior signs</small>
+                        <strong>Raccoon Activity Requests</strong>
+                        <em>Rooflines, vents, decks, attic access, or exterior activity signs.</em>
+                    </span>
 
-                        <article class="swiper-slide info-slide">
-                            <span>Access</span>
-                            <h3>Possible entry points</h3>
-                            <p>
-                                Describe gaps, loose vents, soffit openings, roofline access, damaged screens, or areas
-                                where animals may be entering.
-                            </p>
-                        </article>
+                    <span class="services-index-arrow" aria-hidden="true">→</span>
+                </a>
 
-                        <article class="swiper-slide info-slide">
-                            <span>Photos</span>
-                            <h3>Safe visual context</h3>
-                            <p>
-                                If safe, photos of exterior openings or visible signs can help providers review the
-                                request before discussing next steps.
-                            </p>
-                        </article>
+                <a class="services-index-row" href="squirrel-entry.html">
+                    <span class="services-index-icon">
+                        <i data-lucide="trees"></i>
+                    </span>
 
-                        <article class="swiper-slide info-slide">
-                            <span>Verification</span>
-                            <h3>Questions before hiring</h3>
-                            <p>
-                                Ask about licensing, insurance, written estimates, local wildlife rules, inspection
-                                process, and service scope.
-                            </p>
-                        </article>
-                    </div>
+                    <span class="services-index-text">
+                        <small>Entry points</small>
+                        <strong>Squirrel Entry Point Concerns</strong>
+                        <em>Fast attic sounds, chewing signs, roofline access, or small exterior gaps.</em>
+                    </span>
 
-                    <div class="swiper-pagination service-info-pagination"></div>
-                </div>
+                    <span class="services-index-arrow" aria-hidden="true">→</span>
+                </a>
+
+                <a class="services-index-row" href="bird-bat-concerns.html">
+                    <span class="services-index-icon">
+                        <i data-lucide="feather"></i>
+                    </span>
+
+                    <span class="services-index-text">
+                        <small>Specialized matching</small>
+                        <strong>Bird & Bat Concern Matching</strong>
+                        <em>Vents, chimneys, eaves, droppings, odor, or seasonal activity concerns.</em>
+                    </span>
+
+                    <span class="services-index-arrow" aria-hidden="true">→</span>
+                </a>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
+
+<!-- =========================
+     MATCHING PROCESS — EDITORIAL LINES
+========================== -->
+<section class="services-process services-process-v2 section">
+    <div class="container-wide">
+        <div class="services-process-v2-head">
+            <div class="services-process-v2-intro" data-aos="fade-right">
+                <span class="section-kicker">Provider matching flow</span>
+                <h2>One request, better context, clearer comparison.</h2>
+                <p>
+                    Wildlife concerns can be difficult to describe clearly. Nestwise keeps the first step structured so
+                    homeowners can submit a more focused request and compare independent provider options with better
+                    context.
+                </p>
+            </div>
+
+            <div class="services-process-v2-actions" data-aos="fade-left">
+                <a class="btn btn-primary" href="contact.html">Start request</a>
+            </div>
+        </div>
+
+        <div class="services-process-v2-list">
+            <article class="services-process-row" data-aos="fade-up">
+                <div class="services-process-row-meta">
+                    <span class="services-process-step">Step 01</span>
+                    <span class="services-process-line" aria-hidden="true"></span>
+                </div>
+
+                <div class="services-process-row-body">
+                    <h3>Identify the concern</h3>
+                    <p>
+                        Choose the category that best matches what is being noticed around the home, such as attic
+                        activity, raccoon signs, squirrel entry concerns, or bird and bat-related issues.
+                    </p>
+                </div>
+            </article>
+
+            <article class="services-process-row" data-aos="fade-up" data-aos-delay="80">
+                <div class="services-process-row-meta">
+                    <span class="services-process-step">Step 02</span>
+                    <span class="services-process-line" aria-hidden="true"></span>
+                </div>
+
+                <div class="services-process-row-body">
+                    <h3>Add location details</h3>
+                    <p>
+                        ZIP code and service area information help determine whether independent local provider options
+                        may be available for that request.
+                    </p>
+                </div>
+            </article>
+
+            <article class="services-process-row" data-aos="fade-up" data-aos-delay="140">
+                <div class="services-process-row-meta">
+                    <span class="services-process-step">Step 03</span>
+                    <span class="services-process-line" aria-hidden="true"></span>
+                </div>
+
+                <div class="services-process-row-body">
+                    <h3>Compare providers</h3>
+                    <p>
+                        Review communication, availability, service scope, estimate details, and how clearly each
+                        independent provider explains the next steps.
+                    </p>
+                </div>
+            </article>
+
+            <article class="services-process-row" data-aos="fade-up" data-aos-delay="200">
+                <div class="services-process-row-meta">
+                    <span class="services-process-step">Step 04</span>
+                    <span class="services-process-line" aria-hidden="true"></span>
+                </div>
+
+                <div class="services-process-row-body">
+                    <h3>Verify before hiring</h3>
+                    <p>
+                        Homeowners should confirm licenses, insurance, local requirements, written estimates, and any
+                        wildlife-related regulations before hiring an independent provider.
+                    </p>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+
+<!-- =========================
+     REQUEST DETAILS SWIPER
+========================== -->
+<section class="services-slider-section services-details-rail section">
+    <div class="container-wide">
+        <div class="details-rail-head">
+            <div data-aos="fade-up">
+                <span class="section-kicker">Common request details</span>
+                <h2>Small details can make provider matching clearer.</h2>
+            </div>
+
+            <p data-aos="fade-up" data-aos-delay="80">
+                These are useful notes homeowners can include when describing wildlife activity. They help independent
+                providers understand the request context before discussing next steps.
+            </p>
+
+            <div class="slider-controls" data-aos="fade-up" data-aos-delay="120">
+                <button class="slider-btn service-info-prev" type="button" aria-label="Previous detail">
+                    <i data-lucide="arrow-left"></i>
+                </button>
+
+                <button class="slider-btn service-info-next" type="button" aria-label="Next detail">
+                    <i data-lucide="arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="swiper service-info-swiper details-rail-swiper" data-aos="fade-up">
+            <div class="swiper-wrapper">
+                <article class="swiper-slide detail-rail-slide">
+                    <span class="detail-rail-label">Sounds</span>
+                    <h3>When and where activity is heard</h3>
+                    <p>
+                        Mention if sounds happen at night, early morning, near the attic, wall, roofline, vent, chimney,
+                        or crawl area.
+                    </p>
+                </article>
+
+                <article class="swiper-slide detail-rail-slide">
+                    <span class="detail-rail-label">Signs</span>
+                    <h3>Visible evidence around the home</h3>
+                    <p>
+                        Droppings, disturbed insulation, odor, stains, chewing marks, feathers, nesting material, or
+                        damaged vents can help explain the concern.
+                    </p>
+                </article>
+
+                <article class="swiper-slide detail-rail-slide">
+                    <span class="detail-rail-label">Access</span>
+                    <h3>Possible entry points</h3>
+                    <p>
+                        Describe gaps, loose vents, soffit openings, roofline access, damaged screens, or areas where
+                        animals may be entering.
+                    </p>
+                </article>
+
+                <article class="swiper-slide detail-rail-slide">
+                    <span class="detail-rail-label">Photos</span>
+                    <h3>Safe visual context</h3>
+                    <p>
+                        If safe, photos of exterior openings or visible signs can help providers review the request
+                        before discussing next steps.
+                    </p>
+                </article>
+
+                <article class="swiper-slide detail-rail-slide">
+                    <span class="detail-rail-label">Verification</span>
+                    <h3>Questions before hiring</h3>
+                    <p>
+                        Ask about licensing, insurance, written estimates, local wildlife rules, inspection process, and
+                        service scope.
+                    </p>
+                </article>
+            </div>
+
+            <div class="swiper-pagination service-info-pagination"></div>
+        </div>
+    </div>
+</section>
 
         <!-- =========================
              CTA
         ========================== -->
         <section class="services-cta section-sm">
-            <div class="container">
+            <div class="container-wide">
                 <div class="final-cta dark-panel" data-aos="fade-up">
                     <div>
                         <span class="section-kicker">Ready to compare?</span>

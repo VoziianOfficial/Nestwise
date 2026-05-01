@@ -7,8 +7,9 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     initAos();
+    initServicesHeroSlider();
     initServiceInfoSlider();
-    initServicesTilt();
+    initServicesSoftHover();
     refreshServicesIcons();
 });
 
@@ -28,7 +29,105 @@ function initAos() {
 }
 
 /* =========================
+   SERVICES HERO
+   Background + cards slideshow
+   ========================= */
+
+function initServicesHeroSlider() {
+    const section = document.querySelector(".services-hero-v2");
+    const track = document.querySelector("[data-service-slider-track]");
+    const bgSlides = Array.from(document.querySelectorAll(".services-hero-bg-slide"));
+
+    if (!section || (!track && !bgSlides.length)) return;
+
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    let intervalId = null;
+    let isAnimating = false;
+    let activeIndex = 0;
+
+    const delay = prefersReducedMotion ? 5000 : 2200;
+    const animationSpeed = prefersReducedMotion ? 0 : 520;
+
+    function getGap() {
+        if (!track) return 0;
+
+        const styles = window.getComputedStyle(track);
+        return parseFloat(styles.gap) || 0;
+    }
+
+    function setActiveBackground(index) {
+        if (!bgSlides.length) return;
+
+        bgSlides.forEach((slide, slideIndex) => {
+            slide.classList.toggle("is-active", slideIndex === index);
+        });
+    }
+
+    function slideCardsNext() {
+        if (!track || isAnimating || !track.children.length) return;
+
+        const firstCard = track.children[0];
+        const gap = getGap();
+        const stepWidth = firstCard.getBoundingClientRect().width + gap;
+
+        isAnimating = true;
+
+        track.style.transition = `transform ${animationSpeed}ms cubic-bezier(0.22, 1, 0.36, 1)`;
+        track.style.transform = `translateX(-${stepWidth}px)`;
+
+        window.setTimeout(() => {
+            track.style.transition = "none";
+            track.appendChild(firstCard);
+            track.style.transform = "translateX(0)";
+
+            void track.offsetWidth;
+
+            isAnimating = false;
+        }, animationSpeed + 20);
+    }
+
+    function goNext() {
+        activeIndex = (activeIndex + 1) % Math.max(bgSlides.length, 1);
+
+        setActiveBackground(activeIndex);
+        slideCardsNext();
+    }
+
+    function startSlider() {
+        stopSlider();
+
+        intervalId = window.setInterval(goNext, delay);
+    }
+
+    function stopSlider() {
+        if (!intervalId) return;
+
+        window.clearInterval(intervalId);
+        intervalId = null;
+    }
+
+    setActiveBackground(0);
+    startSlider();
+
+    section.addEventListener("mouseenter", stopSlider);
+    section.addEventListener("mouseleave", startSlider);
+
+    section.addEventListener("focusin", stopSlider);
+    section.addEventListener("focusout", startSlider);
+
+    document.addEventListener("visibilitychange", () => {
+        if (document.hidden) {
+            stopSlider();
+        } else {
+            startSlider();
+        }
+    });
+}
+
+/* =========================
    SERVICE INFO SWIPER
+   Common request details rail
    ========================= */
 
 function initServiceInfoSlider() {
@@ -39,11 +138,12 @@ function initServiceInfoSlider() {
     if (!slider) return;
 
     new Swiper(".service-info-swiper", {
-        slidesPerView: 1,
+        slidesPerView: "auto",
         spaceBetween: 16,
-        speed: 760,
+        speed: 650,
         loop: true,
         grabCursor: true,
+        watchOverflow: true,
 
         pagination: {
             el: ".service-info-pagination",
@@ -56,37 +156,36 @@ function initServiceInfoSlider() {
         },
 
         breakpoints: {
-            720: {
-                slidesPerView: 2,
+            760: {
                 spaceBetween: 18
             },
 
             1120: {
-                slidesPerView: 3,
-                spaceBetween: 18
+                spaceBetween: 22
             }
         }
     });
 }
 
 /* =========================
-   SOFT TILT EFFECT
+   SOFT HOVER MOVEMENT
+   лёгкий эффект, без сильного 3D
    ========================= */
 
-function initServicesTilt() {
-    const cards = document.querySelectorAll(
-        ".service-feature-card, .process-steps article, .info-slide, .evaluation-list article"
+function initServicesSoftHover() {
+    const items = document.querySelectorAll(
+        ".service-slide-card, .detail-rail-slide, .services-index-row, .services-process-row, .evaluation-v2-row"
     );
 
-    if (!cards.length) return;
+    if (!items.length) return;
 
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     if (prefersReducedMotion) return;
 
-    cards.forEach((card) => {
-        card.addEventListener("mousemove", (event) => {
-            const rect = card.getBoundingClientRect();
+    items.forEach((item) => {
+        item.addEventListener("mousemove", (event) => {
+            const rect = item.getBoundingClientRect();
 
             const x = event.clientX - rect.left;
             const y = event.clientY - rect.top;
@@ -94,14 +193,16 @@ function initServicesTilt() {
             const centerX = rect.width / 2;
             const centerY = rect.height / 2;
 
-            const rotateX = ((y - centerY) / centerY) * -2.6;
-            const rotateY = ((x - centerX) / centerX) * 2.6;
+            const moveX = ((x - centerX) / centerX) * 3;
+            const moveY = ((y - centerY) / centerY) * 3;
 
-            card.style.transform = `translateY(-5px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            item.style.setProperty("--hover-x", `${moveX}px`);
+            item.style.setProperty("--hover-y", `${moveY}px`);
         });
 
-        card.addEventListener("mouseleave", () => {
-            card.style.transform = "";
+        item.addEventListener("mouseleave", () => {
+            item.style.removeProperty("--hover-x");
+            item.style.removeProperty("--hover-y");
         });
     });
 }
