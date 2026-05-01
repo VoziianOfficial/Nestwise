@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     renderServicePage(service);
     initAos();
-    initServiceFaq();
     initServicePageTilt();
     initServiceGallerySlider();
     injectServiceFaqSchema(service);
@@ -217,56 +216,6 @@ function renderServiceFaq(service) {
             `;
         })
         .join("");
-}
-
-function initServiceFaq() {
-    const faqItems = document.querySelectorAll(".service-page .faq-item");
-
-    if (!faqItems.length) return;
-
-    faqItems.forEach((item, index) => {
-        const button = item.querySelector(".faq-question");
-        const answer = item.querySelector(".faq-answer");
-
-        if (!button || !answer) return;
-
-        const answerId = `service-faq-answer-${index + 1}`;
-
-        answer.id = answerId;
-        button.setAttribute("aria-controls", answerId);
-        button.setAttribute("aria-expanded", item.classList.contains("is-open") ? "true" : "false");
-
-        if (item.classList.contains("is-open")) {
-            answer.style.maxHeight = `${answer.scrollHeight}px`;
-        } else {
-            answer.style.maxHeight = "0px";
-        }
-
-        button.addEventListener("click", () => {
-            const isOpen = item.classList.contains("is-open");
-
-            faqItems.forEach((otherItem) => {
-                const otherButton = otherItem.querySelector(".faq-question");
-                const otherAnswer = otherItem.querySelector(".faq-answer");
-
-                otherItem.classList.remove("is-open");
-
-                if (otherButton) {
-                    otherButton.setAttribute("aria-expanded", "false");
-                }
-
-                if (otherAnswer) {
-                    otherAnswer.style.maxHeight = "0px";
-                }
-            });
-
-            if (!isOpen) {
-                item.classList.add("is-open");
-                button.setAttribute("aria-expanded", "true");
-                answer.style.maxHeight = `${answer.scrollHeight}px`;
-            }
-        });
-    });
 }
 
 /* =========================
