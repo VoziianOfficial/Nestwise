@@ -1,0 +1,421 @@
+/* ==========================================================
+   NESTWISE — CONTACT PAGE
+   File: /css/contact.css
+   ========================================================== */
+
+/* =========================
+   CONTACT HERO
+   ========================= */
+
+.contact-hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-hero::before {
+    content: "";
+    position: absolute;
+    right: -14%;
+    top: -18%;
+    width: 44vw;
+    min-width: 360px;
+    height: 44vw;
+    min-height: 360px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(169, 139, 85, 0.15), transparent 68%);
+    pointer-events: none;
+}
+
+.contact-hero-layout {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(360px, 0.62fr);
+    gap: clamp(28px, 5vw, 76px);
+    align-items: center;
+}
+
+.contact-hero-content {
+    max-width: 850px;
+}
+
+.contact-hero-content h1 {
+    max-width: 900px;
+    margin-bottom: 18px;
+}
+
+.contact-hero-content p {
+    max-width: 660px;
+    margin-bottom: 25px;
+    color: var(--color-muted);
+    font-size: clamp(1.02rem, 1.4vw, 1.16rem);
+}
+
+.contact-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.contact-hero-card {
+    position: relative;
+    min-height: 430px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    padding: clamp(24px, 4vw, 38px);
+    border: 1px solid rgba(74, 63, 53, 0.12);
+    border-radius: 42px;
+    background:
+        radial-gradient(circle at 82% 16%, rgba(169, 139, 85, 0.16), transparent 28%),
+        rgba(255, 255, 255, 0.68);
+    box-shadow: var(--shadow-card);
+}
+
+.contact-hero-card::before {
+    content: "";
+    position: absolute;
+    right: -46px;
+    top: -46px;
+    width: 190px;
+    height: 190px;
+    border: 1px solid rgba(169, 139, 85, 0.28);
+    border-radius: 50%;
+}
+
+.contact-card-number {
+    position: absolute;
+    left: clamp(22px, 4vw, 38px);
+    top: clamp(22px, 4vw, 38px);
+    color: rgba(169, 139, 85, 0.78);
+    font-family: var(--font-heading);
+    font-size: clamp(4rem, 8vw, 7rem);
+    line-height: 0.78;
+    letter-spacing: -0.09em;
+}
+
+.contact-hero-card h2 {
+    max-width: 360px;
+    margin-bottom: 18px;
+    font-size: clamp(2rem, 4vw, 3.3rem);
+}
+
+.contact-hero-card ul {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-hero-card li {
+    position: relative;
+    padding-left: 24px;
+    color: var(--color-text);
+    font-size: 0.95rem;
+}
+
+.contact-hero-card li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.72em;
+    width: 12px;
+    height: 1px;
+    background: var(--color-gold);
+}
+
+.contact-hero-card p {
+    margin: 0;
+    color: var(--color-muted);
+    font-size: 0.9rem;
+}
+
+/* =========================
+   CONTACT OPTIONS
+   ========================= */
+
+.contact-options-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.contact-option-card {
+    display: grid;
+    grid-template-columns: 54px minmax(0, 1fr);
+    gap: 16px;
+    min-height: 180px;
+    padding: 22px;
+    border: 1px solid rgba(74, 63, 53, 0.12);
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.64);
+    box-shadow: 0 14px 36px rgba(31, 26, 21, 0.05);
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        border-color var(--transition),
+        background var(--transition);
+}
+
+.contact-option-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(169, 139, 85, 0.36);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-soft);
+}
+
+.contact-option-icon {
+    display: grid;
+    place-items: center;
+    width: 54px;
+    height: 54px;
+    border: 1px solid rgba(74, 63, 53, 0.12);
+    border-radius: 50%;
+    color: var(--color-accent);
+    background: rgba(242, 239, 233, 0.74);
+    transition:
+        transform var(--transition),
+        color var(--transition),
+        background var(--transition);
+}
+
+.contact-option-card:hover .contact-option-icon {
+    transform: translateY(-3px) rotate(-7deg);
+    color: var(--color-surface);
+    background: var(--color-accent);
+}
+
+.contact-option-icon svg,
+.contact-option-icon i {
+    width: 21px;
+    height: 21px;
+}
+
+.contact-option-card span:not(.contact-option-icon) {
+    display: inline-flex;
+    margin-bottom: 5px;
+    color: var(--color-accent);
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.contact-option-card strong {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--color-heading);
+    font-size: 1rem;
+    line-height: 1.35;
+}
+
+.contact-option-card p {
+    margin: 0;
+    color: var(--color-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* =========================
+   CONTACT MAIN
+   ========================= */
+
+.contact-main-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.96fr) minmax(380px, 0.78fr);
+    gap: 18px;
+    align-items: stretch;
+}
+
+.contact-form-side,
+.contact-map-side {
+    min-width: 0;
+}
+
+.contact-form-side .request-card {
+    min-height: 100%;
+}
+
+.contact-map-side {
+    display: grid;
+    gap: 14px;
+}
+
+.contact-map-side .map-shell {
+    min-height: 560px;
+}
+
+.contact-map-note {
+    padding: 22px;
+    border: 1px solid rgba(74, 63, 53, 0.12);
+    border-radius: 28px;
+    background:
+        radial-gradient(circle at 88% 12%, rgba(169, 139, 85, 0.12), transparent 28%),
+        rgba(255, 255, 255, 0.64);
+    box-shadow: 0 14px 36px rgba(31, 26, 21, 0.05);
+}
+
+.contact-map-note span {
+    display: inline-flex;
+    margin-bottom: 8px;
+    color: var(--color-accent);
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.contact-map-note p {
+    margin: 0;
+    color: var(--color-muted);
+    font-size: 0.9rem;
+}
+
+/* =========================
+   CONTACT STEPS
+   ========================= */
+
+.contact-steps {
+    position: relative;
+}
+
+.contact-steps::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 34px;
+    width: min(92vw, 980px);
+    height: 1px;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, transparent, rgba(169, 139, 85, 0.5), transparent);
+}
+
+/* =========================
+   CONTACT FAQ
+   ========================= */
+
+.contact-faq .faq-layout {
+    display: grid;
+    grid-template-columns: minmax(280px, 0.66fr) minmax(0, 1fr);
+    gap: clamp(24px, 5vw, 72px);
+    align-items: start;
+}
+
+.contact-faq .faq-intro {
+    position: sticky;
+    top: calc(var(--header-height) + 24px);
+}
+
+.contact-faq .faq-intro h2 {
+    margin-bottom: 14px;
+}
+
+.contact-faq .faq-intro p {
+    color: var(--color-muted);
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 1100px) {
+
+    .contact-hero-layout,
+    .contact-main-layout,
+    .contact-faq .faq-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-hero-content {
+        max-width: 860px;
+    }
+
+    .contact-hero-card {
+        max-width: 760px;
+        min-height: 390px;
+    }
+
+    .contact-map-side .map-shell {
+        min-height: 460px;
+    }
+
+    .contact-faq .faq-intro {
+        position: static;
+    }
+}
+
+@media (max-width: 920px) {
+    .contact-options-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-option-card {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 760px) {
+    .contact-hero {
+        padding-top: 30px;
+    }
+
+    .contact-hero-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .contact-hero-card,
+    .contact-form-side .request-card,
+    .contact-map-side .map-shell,
+    .contact-map-note {
+        border-radius: 28px;
+    }
+
+    .contact-hero-card {
+        min-height: 420px;
+        padding: 24px;
+    }
+
+    .contact-card-number {
+        font-size: 4.2rem;
+    }
+
+    .contact-option-card {
+        grid-template-columns: 46px minmax(0, 1fr);
+        gap: 13px;
+        padding: 18px;
+        border-radius: 24px;
+    }
+
+    .contact-option-icon {
+        width: 46px;
+        height: 46px;
+    }
+
+    .contact-option-icon svg,
+    .contact-option-icon i {
+        width: 19px;
+        height: 19px;
+    }
+
+    .contact-map-side .map-shell {
+        min-height: 500px;
+    }
+}
+
+@media (max-width: 520px) {
+    .contact-hero-card {
+        min-height: 450px;
+    }
+
+    .contact-card-number {
+        font-size: 3.8rem;
+    }
+
+    .contact-hero-card h2 {
+        font-size: 2.25rem;
+    }
+
+    .contact-map-side .map-shell {
+        min-height: 520px;
+    }
+}
