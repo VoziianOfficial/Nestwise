@@ -915,3 +915,572 @@
         min-height: 290px;
     }
 }
+
+/* ==========================================================
+   SERVICE INSIGHT — PHOTO BAND
+   Compact cinematic section, no cards, no clutter
+   ========================================================== */
+
+.service-insight-photo-band {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    min-height: clamp(430px, 52vw, 560px);
+    padding-top: clamp(34px, 4.5vw, 62px);
+    padding-bottom: clamp(26px, 3.6vw, 46px);
+    color: #fff;
+    background: var(--color-dark);
+}
+
+.service-insight-photo-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background:
+        linear-gradient(90deg,
+            rgba(23, 20, 17, 0.92) 0%,
+            rgba(23, 20, 17, 0.78) 34%,
+            rgba(23, 20, 17, 0.44) 68%,
+            rgba(23, 20, 17, 0.18) 100%),
+        linear-gradient(180deg,
+            rgba(23, 20, 17, 0.08),
+            rgba(23, 20, 17, 0.52)),
+        url("../assets/images/service-pages/attic-insight-bg.jpg") center center / cover no-repeat;
+    transform: scale(1.035);
+}
+
+.service-insight-photo-band .container-wide {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    min-height: inherit;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: min(100% - 32px, 1320px);
+}
+
+.service-insight-photo-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(260px, 360px);
+    gap: clamp(28px, 6vw, 90px);
+    align-items: end;
+}
+
+.service-insight-photo-band .section-kicker {
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.service-insight-photo-band .section-kicker::before {
+    background: var(--color-gold);
+}
+
+.service-insight-photo-copy {
+    max-width: 860px;
+}
+
+.service-insight-photo-copy h2 {
+    max-width: 880px;
+    margin: 0 0 16px;
+    color: #fff;
+    font-size: clamp(2.55rem, 5vw, 5.45rem);
+    font-weight: 500;
+    line-height: 0.98;
+    letter-spacing: -0.012em;
+}
+
+.service-insight-photo-copy p {
+    max-width: 640px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: clamp(0.96rem, 1.05vw, 1.05rem);
+    line-height: 1.6;
+}
+
+.service-insight-photo-note {
+    padding-left: 20px;
+    border-left: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.service-insight-photo-note span {
+    display: block;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.62);
+    font-size: 0.64rem;
+    font-weight: 900;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.service-insight-photo-note p {
+    max-width: 330px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.74);
+    font-size: 0.86rem;
+    line-height: 1.54;
+}
+
+.service-insight-photo-strip {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(14px, 3vw, 34px);
+    margin-top: clamp(34px, 6vw, 76px);
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.service-insight-photo-strip div {
+    position: relative;
+    padding-left: 14px;
+    transition:
+        transform var(--transition),
+        opacity var(--transition);
+}
+
+.service-insight-photo-strip div::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 1px;
+    height: 38px;
+    background: rgba(169, 139, 85, 0.68);
+}
+
+.service-insight-photo-strip div:hover {
+    transform: translateY(-3px);
+}
+
+.service-insight-photo-strip small {
+    display: block;
+    margin-bottom: 6px;
+    color: rgba(255, 255, 255, 0.56);
+    font-size: 0.6rem;
+    font-weight: 900;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.service-insight-photo-strip strong {
+    display: block;
+    max-width: 280px;
+    color: #fff;
+    font-size: 0.86rem;
+    font-weight: 700;
+    line-height: 1.36;
+}
+
+/* hide old section pieces if old CSS remains */
+
+.service-insight-photo-band .service-insight-layout,
+.service-insight-photo-band .service-insight-card,
+.service-insight-photo-band .service-insight-text {
+    display: none !important;
+}
+
+/* responsive */
+
+@media (max-width: 980px) {
+    .service-insight-photo-band {
+        min-height: auto;
+    }
+
+    .service-insight-photo-layout {
+        grid-template-columns: 1fr;
+        gap: 26px;
+    }
+
+    .service-insight-photo-note {
+        max-width: 720px;
+        padding-left: 16px;
+    }
+
+    .service-insight-photo-note p {
+        max-width: 640px;
+    }
+
+    .service-insight-photo-strip {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        margin-top: 34px;
+    }
+}
+
+@media (max-width: 620px) {
+    .service-insight-photo-band {
+        padding-top: 34px;
+        padding-bottom: 34px;
+    }
+
+    .service-insight-photo-bg {
+        background:
+            linear-gradient(180deg,
+                rgba(23, 20, 17, 0.88) 0%,
+                rgba(23, 20, 17, 0.72) 52%,
+                rgba(23, 20, 17, 0.62) 100%),
+            url("../assets/images/service-pages/attic-insight-bg.jpg") center center / cover no-repeat;
+    }
+
+    .service-insight-photo-band .container-wide {
+        max-width: min(100% - 24px, 1320px);
+    }
+
+    .service-insight-photo-copy h2 {
+        font-size: clamp(2.1rem, 9.5vw, 3.45rem);
+        line-height: 1.02;
+    }
+
+    .service-insight-photo-copy p {
+        font-size: 0.92rem;
+    }
+
+    .service-insight-photo-strip {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+}
+
+/* ==========================================================
+   SERVICE INSIGHT — BIRD & BAT PHOTO
+   ========================================================== */
+
+.service-insight-birdbat-band .service-insight-photo-bg {
+    background:
+        linear-gradient(90deg,
+            rgba(23, 20, 17, 0.92) 0%,
+            rgba(23, 20, 17, 0.78) 34%,
+            rgba(23, 20, 17, 0.44) 68%,
+            rgba(23, 20, 17, 0.18) 100%),
+        linear-gradient(180deg,
+            rgba(23, 20, 17, 0.08),
+            rgba(23, 20, 17, 0.52)),
+        url("../assets/images/service-pages/bird-bat-insight-bg.jpg") center center / cover no-repeat;
+}
+
+@media (max-width: 620px) {
+    .service-insight-birdbat-band .service-insight-photo-bg {
+        background:
+            linear-gradient(180deg,
+                rgba(23, 20, 17, 0.88) 0%,
+                rgba(23, 20, 17, 0.72) 52%,
+                rgba(23, 20, 17, 0.62) 100%),
+            url("../assets/images/service-pages/bird-bat-insight-bg.jpg") center center / cover no-repeat;
+    }
+}
+
+/* ==========================================================
+   SERVICE INSIGHT — RACCOON PHOTO
+   ========================================================== */
+
+.service-insight-raccoon-band .service-insight-photo-bg {
+    background:
+        linear-gradient(90deg,
+            rgba(23, 20, 17, 0.92) 0%,
+            rgba(23, 20, 17, 0.78) 34%,
+            rgba(23, 20, 17, 0.44) 68%,
+            rgba(23, 20, 17, 0.18) 100%),
+        linear-gradient(180deg,
+            rgba(23, 20, 17, 0.08),
+            rgba(23, 20, 17, 0.52)),
+        url("../assets/images/service-pages/raccoon-insight-bg.jpg") center center / cover no-repeat;
+}
+
+@media (max-width: 620px) {
+    .service-insight-raccoon-band .service-insight-photo-bg {
+        background:
+            linear-gradient(180deg,
+                rgba(23, 20, 17, 0.88) 0%,
+                rgba(23, 20, 17, 0.72) 52%,
+                rgba(23, 20, 17, 0.62) 100%),
+            url("../assets/images/service-pages/raccoon-insight-bg.jpg") center center / cover no-repeat;
+    }
+}
+
+/* ==========================================================
+   SERVICE INSIGHT — SQUIRREL PHOTO
+   ========================================================== */
+
+.service-insight-squirrel-band .service-insight-photo-bg {
+    background:
+        linear-gradient(90deg,
+            rgba(23, 20, 17, 0.92) 0%,
+            rgba(23, 20, 17, 0.78) 34%,
+            rgba(23, 20, 17, 0.44) 68%,
+            rgba(23, 20, 17, 0.18) 100%),
+        linear-gradient(180deg,
+            rgba(23, 20, 17, 0.08),
+            rgba(23, 20, 17, 0.52)),
+        url("../assets/images/service-pages/squirrel-insight-bg.jpg") center center / cover no-repeat;
+}
+
+@media (max-width: 620px) {
+    .service-insight-squirrel-band .service-insight-photo-bg {
+        background:
+            linear-gradient(180deg,
+                rgba(23, 20, 17, 0.88) 0%,
+                rgba(23, 20, 17, 0.72) 52%,
+                rgba(23, 20, 17, 0.62) 100%),
+            url("../assets/images/service-pages/squirrel-insight-bg.jpg") center center / cover no-repeat;
+    }
+}
+
+/* ==========================================================
+   SERVICE FACTORS — CLEAN COMPACT TABLE
+   ========================================================== */
+
+.service-factors-table {
+    position: relative;
+    overflow: visible;
+    padding-top: clamp(30px, 3.8vw, 50px);
+    padding-bottom: clamp(32px, 4vw, 54px);
+    background:
+        radial-gradient(circle at 12% 12%, rgba(169, 139, 85, 0.07), transparent 28%),
+        linear-gradient(180deg, rgba(242, 239, 233, 1), rgba(225, 218, 208, 0.26));
+}
+
+.service-factors-table .container-wide {
+    max-width: min(100% - 32px, 1260px);
+}
+
+/* Head */
+
+.factors-table-head {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 0.42fr);
+    gap: clamp(18px, 4vw, 54px);
+    align-items: end;
+    margin-bottom: clamp(18px, 2.5vw, 26px);
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(74, 63, 53, 0.14);
+}
+
+.factors-table-head .section-kicker {
+    grid-column: 1 / -1;
+    margin-bottom: -4px;
+}
+
+.factors-table-head h2 {
+    max-width: 820px;
+    margin: 0;
+    font-size: clamp(2rem, 3.35vw, 3.8rem);
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.01em;
+}
+
+.factors-table-head p {
+    max-width: 520px;
+    margin: 0 0 4px;
+    color: var(--color-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Layout */
+
+.factors-table-layout {
+    display: grid;
+    grid-template-columns: minmax(280px, 0.36fr) minmax(0, 1fr);
+    gap: clamp(18px, 3vw, 30px);
+    align-items: stretch;
+}
+
+/* Guard against AOS transform/opacity clipping inside this section */
+.factors-table-list.aos-init,
+.factors-table-list.aos-animate {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+/* Image */
+
+.factors-table-media {
+    position: relative;
+    min-height: 330px;
+    overflow: hidden;
+    border-radius: 28px;
+    background: var(--color-bg-soft);
+    border: 1px solid rgba(74, 63, 53, 0.12);
+    box-shadow: 0 16px 42px rgba(31, 26, 21, 0.075);
+}
+
+.factors-table-media img {
+    width: 100%;
+    height: 100%;
+    min-height: inherit;
+    display: block;
+    object-fit: cover;
+    transition: transform 850ms var(--ease);
+}
+
+.factors-table-media:hover img {
+    transform: scale(1.045);
+}
+
+.factors-table-media::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(180deg, rgba(23, 20, 17, 0.02), rgba(23, 20, 17, 0.56)),
+        linear-gradient(90deg, rgba(23, 20, 17, 0.28), transparent 68%);
+    pointer-events: none;
+}
+
+.factors-table-media-label {
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+    z-index: 2;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.34);
+}
+
+.factors-table-media-label span {
+    display: block;
+    margin-bottom: 6px;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 0.62rem;
+    font-weight: 900;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.factors-table-media-label strong {
+    display: block;
+    max-width: 360px;
+    color: #fff;
+    font-size: 0.86rem;
+    font-weight: 700;
+    line-height: 1.42;
+}
+
+/* Factors list */
+
+.factors-table-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-content: stretch;
+    border-top: 1px solid rgba(74, 63, 53, 0.14);
+    border-left: 1px solid rgba(74, 63, 53, 0.1);
+}
+
+.factors-table-list article {
+    position: relative;
+    display: grid;
+    grid-template-columns: 38px minmax(0, 1fr);
+    gap: 12px;
+    align-items: center;
+    min-height: 110px;
+    padding: 16px;
+    border-right: 1px solid rgba(74, 63, 53, 0.1);
+    border-bottom: 1px solid rgba(74, 63, 53, 0.1);
+    background: rgba(255, 255, 255, 0.42);
+    transition:
+        background var(--transition),
+        transform var(--transition),
+        border-color var(--transition);
+}
+
+.factors-table-list article:hover {
+    transform: translateY(-2px);
+    border-color: rgba(169, 139, 85, 0.28);
+    background: rgba(255, 255, 255, 0.72);
+}
+
+.factors-table-list i,
+.factors-table-list svg {
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    padding: 9px;
+    border: 1px solid rgba(74, 63, 53, 0.13);
+    border-radius: 50%;
+    color: var(--color-accent);
+    background: rgba(242, 239, 233, 0.76);
+    transition:
+        transform var(--transition),
+        color var(--transition),
+        background var(--transition);
+}
+
+.factors-table-list article:hover i,
+.factors-table-list article:hover svg {
+    transform: translateY(-2px) rotate(-7deg);
+    color: #fff;
+    background: var(--color-accent);
+}
+
+.factors-table-list span {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--color-accent);
+    font-size: 0.58rem;
+    font-weight: 900;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.factors-table-list h3 {
+    max-width: 360px;
+    margin: 0;
+    color: var(--color-heading);
+    font-family: var(--font-heading);
+    font-size: clamp(1rem, 1.35vw, 1.26rem);
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: -0.01em;
+}
+
+/* Disable old versions inside this section */
+
+.service-factors-table .service-factors-layout,
+.service-factors-table .service-factors-content,
+.service-factors-table .service-factor-grid,
+.service-factors-table .factor-card,
+.service-factors-table .service-factors-media {
+    display: none !important;
+}
+
+/* Responsive */
+
+@media (max-width: 980px) {
+
+    .factors-table-head,
+    .factors-table-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .factors-table-head p {
+        max-width: 760px;
+    }
+
+    .factors-table-media {
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 680px) {
+    .service-factors-table {
+        padding-top: 34px;
+        padding-bottom: 38px;
+    }
+
+    .service-factors-table .container-wide {
+        max-width: min(100% - 24px, 1260px);
+    }
+
+    .factors-table-head h2 {
+        font-size: clamp(2rem, 9vw, 3.2rem);
+        line-height: 1.02;
+    }
+
+    .factors-table-list {
+        grid-template-columns: 1fr;
+    }
+
+    .factors-table-list article {
+        min-height: auto;
+        padding: 14px;
+    }
+}

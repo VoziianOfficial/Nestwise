@@ -1653,6 +1653,17 @@ select.form-control {
     transform: translateY(0);
 }
 
+/* AOS: keep fade elements visible and non-shifted (prevents overflow/clipping when AOS isn't active) */
+[data-aos^="fade"] {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+[data-aos^="fade"].aos-animate {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
 .line-reveal {
     position: relative;
     overflow: hidden;

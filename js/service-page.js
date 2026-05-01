@@ -103,6 +103,7 @@ function renderEvaluationPoints(service) {
         .join("");
 }
 
+
 /* =========================
    FACTORS
    ========================= */
@@ -112,11 +113,67 @@ function renderFactors(service) {
 
     if (!list) return;
 
-    const icons = ["map-pin", "search-check", "home", "clock", "file-check"];
+    const icons = [
+        "map-pin",
+        "search-check",
+        "home",
+        "scan-search",
+        "clock",
+        "file-check"
+    ];
 
-    list.innerHTML = service.factors
+    const labels = [
+        "Location",
+        "Activity",
+        "Access",
+        "Entry areas",
+        "Timing",
+        "Scope"
+    ];
+
+    const fallbackFactors = [
+        "Provider availability by ZIP code",
+        "Visible signs or reported wildlife activity",
+        "Attic, crawl area, roofline, or exterior access",
+        "Possible gaps, vents, soffits, or openings",
+        "Seasonal activity and scheduling needs",
+        "Inspection, cleanup, prevention, or estimate details"
+    ];
+
+    const factors = [...(service.factors || [])];
+
+    while (factors.length < 6) {
+        factors.push(fallbackFactors[factors.length]);
+    }
+
+    const visibleFactors = factors.slice(0, 6);
+
+    if (list.classList.contains("factors-table-list")) {
+        list.innerHTML = visibleFactors
+            .map((factor, index) => {
+                const icon = icons[index];
+                const label = labels[index];
+
+                return `
+                    <article data-aos="fade-up" data-aos-delay="${index * 70}">
+                        <i data-lucide="${icon}"></i>
+
+                        <div>
+                            <span>${label}</span>
+                            <h3>${factor}</h3>
+                        </div>
+                    </article>
+                `;
+            })
+            .join("");
+
+        return;
+    }
+
+    list.innerHTML = visibleFactors
         .map((factor, index) => {
-            const icon = icons[index % icons.length];
+            const icon = icons[index];
+            const label = labels[index];
 
             return `
                 <article class="factor-card" data-aos="fade-up" data-aos-delay="${index * 70}">
@@ -125,7 +182,7 @@ function renderFactors(service) {
                     </span>
 
                     <div>
-                        <span class="factor-number">${String(index + 1).padStart(2, "0")}</span>
+                        <span class="factor-number">${label}</span>
                         <h3>${factor}</h3>
                     </div>
                 </article>
@@ -133,7 +190,6 @@ function renderFactors(service) {
         })
         .join("");
 }
-
 /* =========================
    FAQ
    ========================= */
