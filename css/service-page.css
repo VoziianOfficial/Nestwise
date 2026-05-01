@@ -1185,7 +1185,7 @@
         linear-gradient(180deg,
             rgba(23, 20, 17, 0.08),
             rgba(23, 20, 17, 0.52)),
-        url("../assets/images/service-pages/raccoon-insight-bg.jpg") center center / cover no-repeat;
+        url("../assets/images/services/raccoon.jpg") center center / cover no-repeat;
 }
 
 @media (max-width: 620px) {
@@ -1195,7 +1195,7 @@
                 rgba(23, 20, 17, 0.88) 0%,
                 rgba(23, 20, 17, 0.72) 52%,
                 rgba(23, 20, 17, 0.62) 100%),
-            url("../assets/images/service-pages/raccoon-insight-bg.jpg") center center / cover no-repeat;
+            url("../assets/images/services/raccoon.jpg") center center / cover no-repeat;
     }
 }
 
