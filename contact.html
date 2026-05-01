@@ -30,274 +30,225 @@
     <div class="mobile-menu" data-mobile-menu aria-hidden="true"></div>
 
     <main class="main" id="main">
-        <!-- =========================
-             CONTACT HERO
-        ========================== -->
-        <section class="contact-hero page-hero">
-            <div class="container-wide">
-                <div class="contact-hero-layout">
-                    <div class="contact-hero-content" data-aos="fade-right">
-                        <span class="section-kicker">Contact Nestwise</span>
+<!-- =========================
+     CONTACT HERO — CLEAN BACKGROUND
+========================== -->
+<section class="contact-hero contact-hero-clean page-hero">
+    <div class="contact-hero-clean-bg" aria-hidden="true"></div>
 
-                        <h1>Start with a calm wildlife matching request.</h1>
+    <div class="container-wide">
+        <div class="contact-hero-clean-layout">
+            <div class="contact-hero-clean-content" data-aos="fade-right">
+                <span class="section-kicker">Contact Nestwise</span>
 
-                        <p>
-                            Share what you are noticing around the home. Nestwise helps organize your request so
-                            independent local provider options can be reviewed when available.
-                        </p>
+                <h1>Start a calm wildlife matching request.</h1>
 
-                        <div class="contact-hero-actions">
-                            <a class="btn btn-primary" href="#requestForm">Request matching</a>
-                            <a class="btn btn-secondary" href="tel:+18886142039" data-phone-link>
-                                <span data-phone-text>Compare Options</span>
-                            </a>
-                        </div>
-                    </div>
+                <p>
+                    Share what you are noticing around the home. Nestwise helps organize your request so independent
+                    local provider options can be reviewed when available.
+                </p>
 
-                    <div class="contact-hero-card" data-aos="fade-left">
-                        <span class="contact-card-number">01</span>
+                <div class="contact-hero-actions">
+                    <a class="btn btn-primary" href="#requestForm">Request matching</a>
 
-                        <h2>What to include</h2>
-
-                        <ul>
-                            <li>Where the activity is noticed</li>
-                            <li>Sounds, droppings, odor, or visible signs</li>
-                            <li>Possible entry points or roofline areas</li>
-                            <li>ZIP code for provider availability</li>
-                        </ul>
-
-                        <p>
-                            Nestwise does not perform wildlife removal services directly. Providers are independent.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========================
-             CONTACT OPTIONS
-        ========================== -->
-        <section class="contact-options section-sm">
-            <div class="container-wide">
-                <div class="contact-options-grid">
-                    <a class="contact-option-card" href="tel:+18886142039" data-phone-link data-aos="fade-up">
-                        <span class="contact-option-icon">
-                            <i data-lucide="phone"></i>
-                        </span>
-
-                        <div>
-                            <span>Phone</span>
-                            <strong data-phone-text>Compare Options</strong>
-                            <p>Use the phone CTA to begin a provider-matching request.</p>
-                        </div>
+                    <a class="btn btn-secondary" href="tel:+18886142039" data-phone-link>
+                        <span data-phone-text>Compare Options</span>
                     </a>
-
-                    <a class="contact-option-card" href="mailto:hello@nestwisematch.com" data-email-link
-                        data-aos="fade-up" data-aos-delay="80">
-                        <span class="contact-option-icon">
-                            <i data-lucide="mail"></i>
-                        </span>
-
-                        <div>
-                            <span>Email</span>
-                            <strong data-email-text>hello@nestwisematch.com</strong>
-                            <p>Send request details or questions about the matching process.</p>
-                        </div>
-                    </a>
-
-                    <div class="contact-option-card" data-aos="fade-up" data-aos-delay="140">
-                        <span class="contact-option-icon">
-                            <i data-lucide="map-pin"></i>
-                        </span>
-
-                        <div>
-                            <span>Service area</span>
-                            <strong>United States</strong>
-                            <p data-service-area>Independent wildlife provider matching across the United States</p>
-                        </div>
-                    </div>
                 </div>
             </div>
-        </section>
 
-        <!-- =========================
-             REQUEST FORM + MAP
-        ========================== -->
-        <section class="contact-main section" id="requestForm">
-            <div class="container-wide">
-                <div class="contact-main-layout">
-                    <div class="contact-form-side" data-aos="fade-right">
-                        <div class="request-card">
-                            <div class="request-card-head">
-                                <span class="section-kicker">Request matching</span>
+            <div class="contact-hero-clean-note" data-aos="fade-left">
+                <span>Helpful details</span>
 
-                                <h2>Tell us what you are noticing.</h2>
-
-                                <p>
-                                    The form is intentionally compact. Share the essential details first; independent
-                                    providers may ask follow-up questions directly.
-                                </p>
-                            </div>
-
-                            <form class="request-form" data-request-form>
-                                <div class="form-grid">
-                                    <div class="form-group">
-                                        <label class="form-label" for="contact-name">Full name</label>
-                                        <input class="form-control" id="contact-name" name="name" type="text"
-                                            placeholder="Jane Smith" required>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="form-label" for="contact-email">Email address</label>
-                                        <input class="form-control" id="contact-email" name="email" type="email"
-                                            placeholder="name@email.com" required>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="form-label" for="contact-phone">Phone number</label>
-                                        <input class="form-control" id="contact-phone" name="phone" type="tel"
-                                            placeholder="(555) 000-0000" required>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="form-label" for="contact-zip">ZIP code</label>
-                                        <input class="form-control" id="contact-zip" name="zip" type="text"
-                                            inputmode="numeric" placeholder="ZIP code" required>
-                                    </div>
-
-                                    <div class="form-group full">
-                                        <label class="form-label" for="contact-service">Type of concern</label>
-                                        <select class="form-control" id="contact-service" name="service" required>
-                                            <option value="">Choose a concern</option>
-                                            <option value="Attic Wildlife Activity">Attic Wildlife Activity</option>
-                                            <option value="Raccoon Activity Requests">Raccoon Activity Requests</option>
-                                            <option value="Squirrel Entry Point Concerns">Squirrel Entry Point Concerns
-                                            </option>
-                                            <option value="Bird & Bat Concern Matching">Bird & Bat Concern Matching
-                                            </option>
-                                        </select>
-                                    </div>
-
-                                    <div class="form-group full">
-                                        <label class="form-label" for="contact-message">Briefly describe the
-                                            activity</label>
-                                        <textarea class="form-control" id="contact-message" name="message"
-                                            placeholder="Example: Scratching sounds near the attic at night, possible gap near the roofline."
-                                            required></textarea>
-                                    </div>
-
-                                    <div class="form-group full">
-                                        <label class="custom-check">
-                                            <input type="checkbox" name="consent" required>
-                                            <span class="check-mark" aria-hidden="true"></span>
-                                            <span>
-                                                I understand Nestwise is a matching platform and does not perform
-                                                wildlife services directly.
-                                            </span>
-                                        </label>
-                                    </div>
-                                </div>
-
-                                <div class="request-form-bottom">
-                                    <button class="btn btn-primary" type="submit">Request matching</button>
-                                    <p class="form-note">
-                                        Your information is used to process your matching request. Provider availability
-                                        may vary by location.
-                                    </p>
-                                </div>
-
-                                <p class="form-status" data-form-status aria-live="polite"></p>
-                            </form>
-                        </div>
-                    </div>
-
-                    <div class="contact-map-side" data-aos="fade-left">
-                        <div class="map-shell">
-                            <div class="map-lines" aria-hidden="true"></div>
-
-                            <span class="map-pin" aria-hidden="true"></span>
-                            <span class="map-pin" aria-hidden="true"></span>
-                            <span class="map-pin" aria-hidden="true"></span>
-                            <span class="map-pin" aria-hidden="true"></span>
-
-                            <div class="map-content">
-                                <h3>Matching across U.S. service areas</h3>
-                                <p>
-                                    Provider availability can vary by ZIP code, request type, scheduling, and local
-                                    wildlife requirements.
-                                </p>
-
-                                <div class="map-tags">
-                                    <span>ZIP-based requests</span>
-                                    <span>Independent providers</span>
-                                    <span>Availability varies</span>
-                                    <span>Verify before hiring</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="contact-map-note">
-                            <span>Not a direct service company</span>
-                            <p>
-                                Nestwise helps connect homeowners with independent providers. It does not warrant or
-                                guarantee provider work, pricing, timing, qualifications, or results.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                <ul>
+                    <li>Activity location</li>
+                    <li>Sounds, odor, droppings, or signs</li>
+                    <li>Possible entry points</li>
+                    <li>ZIP code for provider availability</li>
+                </ul>
             </div>
-        </section>
+        </div>
 
-        <!-- =========================
-             REQUEST STEPS
-        ========================== -->
-        <section class="contact-steps section">
-            <div class="container-wide">
-                <div class="section-center" data-aos="fade-up">
-                    <span class="section-kicker">After you submit</span>
-                    <h2>What happens after a matching request.</h2>
+        <div class="contact-hero-clean-strip" data-aos="fade-up" data-aos-delay="120">
+            <div>
+                <small>Platform role</small>
+                <strong>Nestwise does not perform wildlife services directly.</strong>
+            </div>
+
+            <div>
+                <small>Provider model</small>
+                <strong>Providers are independent local companies.</strong>
+            </div>
+
+            <div>
+                <small>Before hiring</small>
+                <strong>Homeowners should verify license, insurance, and scope.</strong>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- =========================
+     CONTACT OPTIONS — LINE STRIP
+========================== -->
+<section class="contact-options contact-options-line section-sm">
+    <div class="container-wide">
+        <div class="contact-options-line-head" data-aos="fade-up">
+            <span class="section-kicker">Contact options</span>
+            <h2>Choose the easiest way to start.</h2>
+        </div>
+
+        <div class="contact-options-line-grid">
+            <a class="contact-option-line" href="tel:+18886142039" data-phone-link data-aos="fade-up">
+                <span class="contact-option-line-icon">
+                    <i data-lucide="phone"></i>
+                </span>
+
+                <span class="contact-option-line-content">
+                    <small>Phone</small>
+                    <strong data-phone-text>Compare Options</strong>
+                    <em>Use the phone CTA to begin a provider-matching request.</em>
+                </span>
+
+                <span class="contact-option-line-arrow" aria-hidden="true">→</span>
+            </a>
+
+            <a class="contact-option-line" href="mailto:hello@nestwisematch.com" data-email-link data-aos="fade-up"
+                data-aos-delay="80">
+                <span class="contact-option-line-icon">
+                    <i data-lucide="mail"></i>
+                </span>
+
+                <span class="contact-option-line-content">
+                    <small>Email</small>
+                    <strong data-email-text>hello@nestwisematch.com</strong>
+                    <em>Send request details or questions about the matching process.</em>
+                </span>
+
+                <span class="contact-option-line-arrow" aria-hidden="true">→</span>
+            </a>
+
+            <div class="contact-option-line" data-aos="fade-up" data-aos-delay="140">
+                <span class="contact-option-line-icon">
+                    <i data-lucide="map-pin"></i>
+                </span>
+
+                <span class="contact-option-line-content">
+                    <small>Service area</small>
+                    <strong>United States</strong>
+                    <em data-service-area>Independent wildlife provider matching across the United States.</em>
+                </span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =========================
+     REQUEST FORM + REAL MAP — EQUAL COMPACT
+========================== -->
+<section class="contact-request-equal section" id="requestForm">
+    <div class="container-wide">
+        <div class="contact-request-equal-head" data-aos="fade-up">
+            <span class="section-kicker">Request matching</span>
+
+            <h2>Tell us what you are noticing.</h2>
+
+            <p>
+                Share the essential details first. Nestwise helps organize the request for independent provider matching
+                when available.
+            </p>
+        </div>
+
+        <div class="contact-request-equal-body">
+            <div class="contact-request-equal-panel contact-request-form-panel" data-aos="fade-right">
+                <form class="request-form contact-equal-form" data-request-form>
+                    <div class="contact-equal-form-grid">
+                        <div class="form-group">
+                            <label class="form-label" for="contact-name">Full name</label>
+                            <input class="form-control" id="contact-name" name="name" type="text"
+                                placeholder="Jane Smith" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="contact-email">Email address</label>
+                            <input class="form-control" id="contact-email" name="email" type="email"
+                                placeholder="name@email.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="contact-phone">Phone number</label>
+                            <input class="form-control" id="contact-phone" name="phone" type="tel"
+                                placeholder="(555) 000-0000" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="contact-zip">ZIP code</label>
+                            <input class="form-control" id="contact-zip" name="zip" type="text" inputmode="numeric"
+                                placeholder="ZIP code" required>
+                        </div>
+
+                        <div class="form-group full">
+                            <label class="form-label" for="contact-service">Type of concern</label>
+                            <select class="form-control" id="contact-service" name="service" required>
+                                <option value="">Choose a concern</option>
+                                <option value="Attic Wildlife Activity">Attic Wildlife Activity</option>
+                                <option value="Raccoon Activity Requests">Raccoon Activity Requests</option>
+                                <option value="Squirrel Entry Point Concerns">Squirrel Entry Point Concerns</option>
+                                <option value="Bird & Bat Concern Matching">Bird & Bat Concern Matching</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full">
+                            <label class="form-label" for="contact-message">Briefly describe the activity</label>
+                            <textarea class="form-control" id="contact-message" name="message"
+                                placeholder="Example: Scratching sounds near the attic at night, possible gap near the roofline."
+                                required></textarea>
+                        </div>
+
+                        <div class="form-group full">
+                            <label class="custom-check contact-equal-check">
+                                <input type="checkbox" name="consent" required>
+                                <span class="check-mark" aria-hidden="true"></span>
+                                <span>
+                                    I understand Nestwise is a matching platform and does not perform wildlife services
+                                    directly.
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="contact-equal-form-bottom">
+                        <button class="btn btn-primary" type="submit">Request matching</button>
+
+                        <p class="form-note">
+                            Provider availability may vary by ZIP code, request type, and local requirements.
+                        </p>
+                    </div>
+
+                    <p class="form-status" data-form-status aria-live="polite"></p>
+                </form>
+            </div>
+
+            <aside class="contact-request-equal-panel contact-request-map-panel" data-aos="fade-left">
+                <div class="contact-equal-map">
+                    <iframe title="Nestwise mailing office map"
+                        src="https://www.google.com/maps?q=600%20Congress%20Avenue%2C%20Austin%2C%20TX%2078701%2C%20USA&output=embed"
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+                <div class="contact-equal-address">
+                    <span>Mailing office</span>
+                    <strong>600 Congress Avenue, Austin, TX 78701</strong>
                     <p>
-                        The goal is to make the first step easier while keeping the homeowner in control of provider
-                        comparison and final hiring decisions.
+                        This address is for platform correspondence. Nestwise supports independent provider matching
+                        across U.S. service areas.
                     </p>
                 </div>
+            </aside>
+        </div>
+    </div>
+</section>
 
-                <div class="line-timeline">
-                    <article class="timeline-item">
-                        <span class="timeline-number">01</span>
-                        <h3>Request details are organized</h3>
-                        <p>
-                            Your concern type, ZIP code, contact details, and message help shape the matching request.
-                        </p>
-                    </article>
-
-                    <article class="timeline-item">
-                        <span class="timeline-number">02</span>
-                        <h3>Provider options may be reviewed</h3>
-                        <p>
-                            Independent provider availability may vary by location, category, and scheduling capacity.
-                        </p>
-                    </article>
-
-                    <article class="timeline-item">
-                        <span class="timeline-number">03</span>
-                        <h3>Providers may contact you</h3>
-                        <p>
-                            Available providers may discuss inspection, estimates, service scope, or next steps
-                            directly.
-                        </p>
-                    </article>
-
-                    <article class="timeline-item">
-                        <span class="timeline-number">04</span>
-                        <h3>You verify before hiring</h3>
-                        <p>
-                            Review licenses, insurance, qualifications, written estimates, and local requirements.
-                        </p>
-                    </article>
-                </div>
-            </div>
-        </section>
 
         <!-- =========================
              CONTACT FAQ
@@ -316,7 +267,7 @@
                     </div>
 
                     <div class="faq-list" data-aos="fade-left">
-                        <div class="faq-item is-open">
+                        <div class="faq-item">
                             <button class="faq-question" type="button">
                                 <span>Does Nestwise send its own wildlife team?</span>
                                 <span class="faq-icon" aria-hidden="true"></span>
@@ -382,21 +333,7 @@
                             </div>
                         </div>
 
-                        <div class="faq-item">
-                            <button class="faq-question" type="button">
-                                <span>Is my request a commitment to hire?</span>
-                                <span class="faq-icon" aria-hidden="true"></span>
-                            </button>
-
-                            <div class="faq-answer">
-                                <div class="faq-answer-inner">
-                                    <p>
-                                        No. A matching request is not a commitment to hire. Homeowners can compare
-                                        available options and decide whether to move forward with a provider.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                      
                     </div>
                 </div>
             </div>
@@ -406,7 +343,7 @@
              FINAL CTA
         ========================== -->
         <section class="contact-final section-sm">
-            <div class="container">
+            <div class="container-wide">
                 <div class="final-cta dark-panel" data-aos="fade-up">
                     <div>
                         <span class="section-kicker">Ready to begin?</span>
