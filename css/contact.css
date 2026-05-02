@@ -991,7 +991,7 @@
     position: relative;
     overflow: hidden;
     padding-top: clamp(28px, 3.4vw, 46px);
-    padding-bottom: clamp(30px, 3.8vw, 52px);
+    padding-bottom: clamp(40px, 4.6vw, 72px);
     background:
         radial-gradient(circle at 12% 12%, rgba(169, 139, 85, 0.08), transparent 28%),
         linear-gradient(180deg, rgba(242, 239, 233, 1), rgba(225, 218, 208, 0.28));
@@ -1045,7 +1045,7 @@
 }
 
 .contact-request-equal-panel {
-    height: clamp(470px, 48vh, 520px);
+    height: clamp(560px, 56vh, 640px);
     min-width: 0;
     padding: 14px;
     border: 1px solid rgba(74, 63, 53, 0.12);
@@ -1062,6 +1062,168 @@
     transform: translateY(-2px);
     border-color: rgba(169, 139, 85, 0.3);
     box-shadow: 0 20px 54px rgba(31, 26, 21, 0.09);
+}
+
+/* ==========================================================
+   CONTACT REQUEST — REQUEST LINES FORM (HOME PARITY)
+   ========================================================== */
+
+.contact-request-form-panel {
+    padding: 0;
+    background: transparent;
+    border-color: rgba(74, 63, 53, 0.1);
+}
+
+.contact-request-equal .contact-request-lines-form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    padding: 12px;
+    border-radius: 24px;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.66), rgba(255, 255, 255, 0.42));
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+
+.contact-request-equal .contact-request-lines-form .request-lines-fields {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 18px;
+    row-gap: 14px;
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow: visible;
+    min-width: 0;
+}
+
+.contact-request-equal .contact-request-lines-form .line-field,
+.contact-request-equal .contact-request-lines-form .line-field.full {
+    min-width: 0;
+}
+
+.contact-request-equal .contact-request-lines-form .line-field.full {
+    grid-column: 1 / -1;
+}
+
+.contact-request-equal .contact-request-lines-form .line-field label {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--color-accent);
+    font-size: 0.64rem;
+    font-weight: 900;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.contact-request-equal .contact-request-lines-form .line-field input,
+.contact-request-equal .contact-request-lines-form .line-field select,
+.contact-request-equal .contact-request-lines-form .line-field textarea {
+    width: 100%;
+    min-height: 42px;
+    padding: 0 0 10px;
+    border: 0;
+    border-bottom: 1px solid rgba(74, 63, 53, 0.24);
+    border-radius: 0;
+    outline: none;
+    color: var(--color-heading);
+    background: transparent;
+    font: inherit;
+    font-size: 0.96rem;
+    transition:
+        border-color var(--transition),
+        box-shadow var(--transition);
+}
+
+.contact-request-equal .contact-request-lines-form .line-field input.is-invalid,
+.contact-request-equal .contact-request-lines-form .line-field select.is-invalid,
+.contact-request-equal .contact-request-lines-form .line-field textarea.is-invalid {
+    border-bottom-color: rgba(138, 59, 47, 0.65);
+    box-shadow: 0 8px 0 -7px rgba(138, 59, 47, 0.55);
+}
+
+.contact-request-equal .contact-request-lines-form .line-field textarea {
+    min-height: 82px;
+    padding-top: 4px;
+    resize: vertical;
+}
+
+.contact-request-equal .contact-request-lines-form .line-field select {
+    appearance: none;
+    background-image:
+        linear-gradient(45deg, transparent 50%, var(--color-accent) 50%),
+        linear-gradient(135deg, var(--color-accent) 50%, transparent 50%);
+    background-position:
+        calc(100% - 13px) 17px,
+        calc(100% - 8px) 17px;
+    background-size: 5px 5px;
+    background-repeat: no-repeat;
+}
+
+.contact-request-equal .contact-request-lines-form .line-field input:focus,
+.contact-request-equal .contact-request-lines-form .line-field select:focus,
+.contact-request-equal .contact-request-lines-form .line-field textarea:focus {
+    border-color: var(--color-gold);
+    box-shadow: 0 8px 0 -7px rgba(169, 139, 85, 0.55);
+}
+
+.contact-request-equal .contact-request-lines-form .request-lines-bottom {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(74, 63, 53, 0.12);
+}
+
+.contact-request-equal .contact-request-lines-form .request-lines-bottom .btn {
+    width: 100%;
+    max-width: 320px;
+}
+
+.contact-request-equal .contact-request-lines-form .form-status {
+    min-height: 16px;
+    margin: 4px 0 0;
+    text-align: center;
+    font-size: 0.78rem;
+}
+
+@media (min-width: 1081px) {
+    .contact-request-equal .contact-request-lines-form .line-field.full {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-request-equal .contact-request-lines-form .line-field.full textarea {
+        flex: 1 1 auto;
+        min-height: 110px;
+        height: 100%;
+        max-height: none;
+        resize: none;
+    }
+}
+
+@media (max-width: 1080px) {
+    .contact-request-equal .contact-request-lines-form .request-lines-fields {
+        column-gap: 16px;
+        row-gap: 14px;
+    }
+}
+
+@media (max-width: 760px) {
+    .contact-request-equal .contact-request-lines-form {
+        padding: 12px;
+        border-radius: 22px;
+    }
+
+    .contact-request-equal .contact-request-lines-form .request-lines-fields {
+        grid-template-columns: 1fr;
+        row-gap: 14px;
+    }
+
+    .contact-request-equal .contact-request-lines-form .request-lines-bottom .btn {
+        max-width: none;
+    }
 }
 
 /* form */
@@ -1266,7 +1428,7 @@
     }
 
     .contact-request-equal-panel {
-        height: 420px;
+        height: 520px;
         padding: 14px;
         border-radius: 22px;
     }

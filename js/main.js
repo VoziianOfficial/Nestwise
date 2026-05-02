@@ -687,8 +687,17 @@
                 }, 1800);
             });
 
-            form.querySelectorAll(".form-control").forEach((field) => {
+            form.querySelectorAll("input, select, textarea").forEach((field) => {
                 field.addEventListener("input", () => {
+                    field.classList.remove("is-invalid");
+
+                    if (status) {
+                        status.textContent = "";
+                        status.classList.remove("is-error", "is-success");
+                    }
+                });
+
+                field.addEventListener("change", () => {
                     field.classList.remove("is-invalid");
 
                     if (status) {
