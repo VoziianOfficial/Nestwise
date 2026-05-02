@@ -420,6 +420,25 @@
     .contact-map-side .map-shell {
         min-height: 500px;
     }
+
+    /* keep FAQ inside container + compact */
+    .contact-faq .faq-layout {
+        gap: 14px;
+    }
+
+    .contact-faq .faq-intro {
+        max-width: 100%;
+    }
+
+    .contact-faq .faq-intro h2 {
+        white-space: normal;
+        font-size: clamp(1.55rem, 7.2vw, 2.15rem);
+        line-height: 1.08;
+    }
+
+    .contact-faq .faq-list {
+        gap: 10px;
+    }
 }
 
 @media (max-width: 520px) {
@@ -437,6 +456,10 @@
 
     .contact-map-side .map-shell {
         min-height: 520px;
+    }
+
+    .contact-faq .faq-intro h2 {
+        font-size: clamp(1.45rem, 8.2vw, 1.95rem);
     }
 }
 
@@ -1024,7 +1047,7 @@
 .contact-request-equal-panel {
     height: clamp(470px, 48vh, 520px);
     min-width: 0;
-    padding: 16px;
+    padding: 14px;
     border: 1px solid rgba(74, 63, 53, 0.12);
     border-radius: 24px;
     background: rgba(255, 255, 255, 0.74);
@@ -1052,7 +1075,8 @@
 .contact-equal-form-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 9px 10px;
+    gap: 8px 10px;
+    flex: 1 1 auto;
 }
 
 .contact-equal-form-grid .full {
@@ -1061,7 +1085,7 @@
 
 .contact-request-equal .form-label {
     display: block;
-    margin-bottom: 4px;
+    margin-bottom: 3px;
     color: var(--color-accent);
     font-size: 0.58rem;
     font-weight: 900;
@@ -1082,9 +1106,24 @@
 }
 
 .contact-request-equal textarea.form-control {
-    min-height: 66px;
-    max-height: 78px;
+    min-height: 58px;
+    max-height: 72px;
     resize: vertical;
+}
+
+@media (min-width: 1081px) {
+    .contact-equal-form-grid .form-group.full {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-equal-form-grid .form-group.full textarea.form-control {
+        flex: 1 1 auto;
+        min-height: 140px;
+        max-height: none;
+        height: 100%;
+        resize: none;
+    }
 }
 
 .contact-request-equal select.form-control {
@@ -1102,88 +1141,28 @@
     box-shadow: 0 0 0 4px rgba(169, 139, 85, 0.12);
 }
 
-/* checkbox */
-
-.contact-equal-check {
-    display: grid;
-    grid-template-columns: 17px minmax(0, 1fr);
-    gap: 9px;
-    align-items: start;
-    color: var(--color-muted);
-    font-size: 0.7rem;
-    line-height: 1.34;
-}
-
-.contact-equal-check input {
-    position: absolute;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.contact-equal-check .check-mark {
-    position: relative;
-    width: 17px;
-    height: 17px;
-    margin-top: 1px;
-    border: 1px solid rgba(74, 63, 53, 0.22);
-    border-radius: 6px;
-    background: rgba(255, 255, 255, 0.86);
-}
-
-.contact-equal-check .check-mark::after {
-    content: "";
-    position: absolute;
-    left: 5px;
-    top: 2px;
-    width: 5px;
-    height: 9px;
-    border-right: 2px solid #fff;
-    border-bottom: 2px solid #fff;
-    opacity: 0;
-    transform: rotate(45deg) scale(0.7);
-    transition:
-        opacity var(--transition),
-        transform var(--transition);
-}
-
-.contact-equal-check input:checked+.check-mark {
-    border-color: var(--color-accent);
-    background: var(--color-accent);
-}
-
-.contact-equal-check input:checked+.check-mark::after {
-    opacity: 1;
-    transform: rotate(45deg) scale(1);
-}
-
 /* form bottom */
 
 .contact-equal-form-bottom {
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr);
-    gap: 12px;
+    display: flex;
+    justify-content: center;
     align-items: center;
     margin-top: auto;
-    padding-top: 10px;
+    padding-top: 8px;
     border-top: 1px solid rgba(74, 63, 53, 0.12);
 }
 
 .contact-equal-form-bottom .btn {
     min-height: 38px;
     padding-inline: 16px;
-}
-
-.contact-equal-form-bottom .form-note {
-    max-width: 390px;
-    margin: 0;
-    color: var(--color-muted);
-    font-size: 0.7rem;
-    line-height: 1.34;
+    max-width: 320px;
+    width: 100%;
+    margin-inline: auto;
 }
 
 .contact-request-equal .form-status {
     min-height: 15px;
-    margin: 6px 0 0;
+    margin: 4px 0 0;
     font-size: 0.76rem;
 }
 
@@ -1259,27 +1238,39 @@
 /* responsive */
 
 @media (max-width: 1080px) {
+    /* keep the desktop 2-column layout on tablets, just more compact */
 
-    .contact-request-equal-head,
-    .contact-request-equal-body {
-        grid-template-columns: 1fr;
+    .contact-request-equal {
+        padding-top: 26px;
+        padding-bottom: 34px;
     }
 
     .contact-request-equal-head {
-        gap: 10px;
+        grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
+        gap: 18px;
+        margin-bottom: 12px;
+        padding-bottom: 12px;
+    }
+
+    .contact-request-equal-head h2 {
+        font-size: clamp(1.85rem, 3.4vw, 2.85rem);
     }
 
     .contact-request-equal-head p {
-        max-width: 760px;
+        max-width: 360px;
+        font-size: 0.82rem;
+    }
+
+    .contact-request-equal-body {
+        gap: 12px;
     }
 
     .contact-request-equal-panel {
-        height: auto;
+        height: 420px;
+        padding: 14px;
+        border-radius: 22px;
     }
 
-    .contact-request-map-panel {
-        min-height: 420px;
-    }
 }
 
 @media (max-width: 760px) {
@@ -1292,6 +1283,11 @@
         max-width: min(100% - 24px, 1240px);
     }
 
+    .contact-request-equal-head,
+    .contact-request-equal-body {
+        grid-template-columns: 1fr;
+    }
+
     .contact-request-equal-head h2 {
         font-size: clamp(2rem, 9vw, 3.2rem);
         line-height: 1.02;
@@ -1302,16 +1298,17 @@
     }
 
     .contact-request-equal-panel {
+        height: auto;
         padding: 14px;
         border-radius: 22px;
     }
 
     .contact-equal-form-bottom {
-        grid-template-columns: 1fr;
+        justify-content: stretch;
     }
 
     .contact-equal-form-bottom .btn {
-        width: 100%;
+        max-width: none;
     }
 
     .contact-request-map-panel {

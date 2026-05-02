@@ -1840,7 +1840,14 @@
     }
 
     .services-process-v2-actions {
-        align-self: start;
+        position: absolute;
+        top: 0;
+        right: 0;
+        align-self: auto;
+    }
+
+    .services-process-v2-intro {
+        padding-right: 160px;
     }
 
     .services-process-v2-intro h2 {
@@ -1849,6 +1856,14 @@
 }
 
 @media (max-width: 760px) {
+    .services-process-v2-actions {
+        position: static;
+    }
+
+    .services-process-v2-intro {
+        padding-right: 0;
+    }
+
     .services-process-v2 {
         padding-top: 44px;
         padding-bottom: 44px;
@@ -2515,7 +2530,8 @@
     }
 
     .details-rail-head .slider-controls {
-        justify-content: flex-start;
+        width: 100%;
+        justify-content: flex-end;
     }
 }
 

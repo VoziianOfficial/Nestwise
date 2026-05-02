@@ -915,7 +915,6 @@
 
                         <div class="request-form-bottom">
                             <button class="btn btn-primary" type="submit">Request matching</button>
-                            <p class="form-note">${config.requestForm.privacyNote}</p>
                         </div>
 
                         <p class="form-status" data-form-status aria-live="polite"></p>
