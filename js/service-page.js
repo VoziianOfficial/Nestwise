@@ -1,17 +1,6 @@
 "use strict";
 
-/* ==========================================================
-   NESTWISE — SERVICE PAGE SCRIPT
-   File: /js/service-page.js
 
-   This file reads the current page name:
-   - attic-wildlife.html
-   - raccoon-activity.html
-   - squirrel-entry.html
-   - bird-bat-concerns.html
-
-   Then it pulls the correct content from js/config.js.
-   ========================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
     const service = getCurrentService();
@@ -29,9 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     refreshServiceIcons();
 });
 
-/* =========================
-   GET CURRENT SERVICE
-   ========================= */
+
 
 function getCurrentService() {
     if (window.NESTWISE && typeof window.NESTWISE.getCurrentService === "function") {
@@ -47,9 +34,7 @@ function getCurrentService() {
     return config.services.find((service) => service.href === pageName) || null;
 }
 
-/* =========================
-   RENDER PAGE
-   ========================= */
+
 
 function renderServicePage(service) {
     setText("[data-service-kicker]", service.kicker);
@@ -81,9 +66,7 @@ function setImage(selector, src, alt) {
     });
 }
 
-/* =========================
-   EVALUATION POINTS
-   ========================= */
+
 
 function renderEvaluationPoints(service) {
     const list = document.querySelector("[data-service-evaluation-list]");
@@ -103,9 +86,7 @@ function renderEvaluationPoints(service) {
 }
 
 
-/* =========================
-   FACTORS
-   ========================= */
+
 
 function renderFactors(service) {
     const list = document.querySelector("[data-service-factors]");
@@ -189,9 +170,7 @@ function renderFactors(service) {
         })
         .join("");
 }
-/* =========================
-   FAQ
-   ========================= */
+
 
 function renderServiceFaq(service) {
     const list = document.querySelector("[data-service-faq-list]");
@@ -218,9 +197,7 @@ function renderServiceFaq(service) {
         .join("");
 }
 
-/* =========================
-   RELATED SERVICES
-   ========================= */
+
 
 function renderRelatedServices(currentService) {
     const list = document.querySelector("[data-related-services]");
@@ -251,9 +228,7 @@ function renderRelatedServices(currentService) {
         .join("");
 }
 
-/* =========================
-   SERVICE SELECT
-   ========================= */
+
 
 function renderServiceSelect(currentService) {
     const selects = document.querySelectorAll("[data-service-select]");
@@ -279,9 +254,7 @@ function renderServiceSelect(currentService) {
     });
 }
 
-/* =========================
-   VISUAL LABELS
-   ========================= */
+
 
 function renderServiceVisualLabels(service) {
     const labels = document.querySelectorAll("[data-service-menu-title]");
@@ -291,9 +264,7 @@ function renderServiceVisualLabels(service) {
     });
 }
 
-/* =========================
-   AOS
-   ========================= */
+
 
 function initAos() {
     if (typeof AOS === "undefined") return;
@@ -306,9 +277,7 @@ function initAos() {
     });
 }
 
-/* =========================
-   GALLERY SWIPER
-   ========================= */
+
 
 function initServiceGallerySlider() {
     if (typeof Swiper === "undefined") return;
@@ -348,9 +317,7 @@ function initServiceGallerySlider() {
     });
 }
 
-/* =========================
-   SOFT TILT
-   ========================= */
+
 
 function initServicePageTilt() {
     const cards = document.querySelectorAll(
@@ -385,9 +352,7 @@ function initServicePageTilt() {
     });
 }
 
-/* =========================
-   FAQ SCHEMA
-   ========================= */
+
 
 function injectServiceFaqSchema(service) {
     if (!service.faq || !service.faq.length) return;
@@ -425,9 +390,7 @@ function injectServiceFaqSchema(service) {
     document.head.appendChild(schema);
 }
 
-/* =========================
-   ICON REFRESH
-   ========================= */
+
 
 function refreshServiceIcons() {
     if (window.NESTWISE && typeof window.NESTWISE.refreshIcons === "function") {

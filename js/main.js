@@ -1,19 +1,6 @@
 "use strict";
 
-/* ==========================================================
-   NESTWISE — MAIN GLOBAL SCRIPT
-   Shared behavior:
-   - config injection
-   - page meta
-   - sticky header
-   - active navigation
-   - mobile full-screen menu
-   - footer generation
-   - policy consent banner
-   - FAQ accordion
-   - reveal animations
-   - request form UI behavior
-   ========================================================== */
+
 
 (function () {
     const config = window.SITE_CONFIG;
@@ -65,9 +52,7 @@
         refreshIcons();
     });
 
-    /* =========================
-       PAGE HELPERS
-       ========================= */
+    
 
     function getCurrentPageName() {
         const path = window.location.pathname;
@@ -118,9 +103,7 @@
         metaDescription.setAttribute("content", meta.description);
     }
 
-    /* =========================
-       BASE LAYOUT
-       ========================= */
+    
 
     function ensureBaseLayout() {
         ensureSkipLink();
@@ -189,9 +172,7 @@
         footer.innerHTML = createFooterMarkup();
     }
 
-    /* =========================
-       HEADER MARKUP
-       ========================= */
+    
 
     function createHeaderMarkup() {
         const navigationMarkup = config.navigation
@@ -251,9 +232,7 @@
         `;
     }
 
-    /* =========================
-       MOBILE MENU MARKUP
-       ========================= */
+    
 
     function createMobileMenuMarkup() {
         const navMarkup = config.navigation
@@ -313,9 +292,7 @@
         `;
     }
 
-    /* =========================
-       FOOTER MARKUP
-       ========================= */
+    
 
     function createFooterMarkup() {
         const year = new Date().getFullYear();
@@ -395,9 +372,7 @@
         `;
     }
 
-    /* =========================
-       CONFIG VALUE INJECTION
-       ========================= */
+    
 
     function injectConfigValues() {
         setText(selectors.companyName, config.companyName);
@@ -435,9 +410,7 @@
         });
     }
 
-    /* =========================
-       HEADER SCROLL
-       ========================= */
+    
 
     function initHeaderScroll() {
         const header = document.querySelector(selectors.siteHeader);
@@ -455,9 +428,7 @@
         });
     }
 
-    /* =========================
-       ACTIVE NAV
-       ========================= */
+    
 
     function initActiveNav() {
         const links = document.querySelectorAll(".nav-link");
@@ -471,9 +442,7 @@
         });
     }
 
-    /* =========================
-       MOBILE MENU
-       ========================= */
+    
 
     function initMobileMenu() {
         const toggle = document.querySelector("[data-menu-toggle]");
@@ -527,9 +496,7 @@
         });
     }
 
-    /* =========================
-       FAQ ACCORDION
-       ========================= */
+    
 
     function initFaqAccordions() {
         const faqItems = document.querySelectorAll(selectors.faqItem);
@@ -577,9 +544,7 @@
         });
     }
 
-    /* =========================
-       REVEAL ANIMATIONS
-       ========================= */
+    
 
     function initRevealAnimations() {
         const revealItems = document.querySelectorAll(`${selectors.reveal}, ${selectors.lineReveal}`);
@@ -639,9 +604,7 @@
         timelineItems.forEach((item) => observer.observe(item));
     }
 
-    /* =========================
-       REQUEST FORMS
-       ========================= */
+    
 
     function initRequestForms() {
         const forms = document.querySelectorAll(selectors.requestForm);
@@ -722,9 +685,7 @@
         });
     }
 
-    /* =========================
-       POLICY CONSENT
-       ========================= */
+    
 
     function initPolicyConsent() {
         const consent = config.policyConsent;
@@ -786,9 +747,7 @@
         });
     }
 
-    /* =========================
-       FAQ JSON-LD FROM DOM
-       ========================= */
+    
 
     function injectFaqSchemaFromDom() {
         const faqItems = document.querySelectorAll(selectors.faqItem);
@@ -838,9 +797,7 @@
         document.head.appendChild(schema);
     }
 
-    /* =========================
-       ICONS
-       ========================= */
+    
 
     function refreshIcons() {
         if (window.lucide && typeof window.lucide.createIcons === "function") {
@@ -848,9 +805,7 @@
         }
     }
 
-    /* =========================
-       SHARED PUBLIC HELPERS
-       ========================= */
+    
 
     window.NESTWISE = {
         getConfig() {

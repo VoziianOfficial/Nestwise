@@ -1,9 +1,6 @@
 "use strict";
 
-/* ==========================================================
-   NESTWISE — HOME PAGE SCRIPT
-   File: /js/home.js
-   ========================================================== */
+
 
 document.addEventListener("DOMContentLoaded", () => {
     initAos();
@@ -13,9 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     refreshHomeIcons();
 });
 
-/* =========================
-   AOS
-   ========================= */
+
 
 function initAos() {
     if (typeof AOS === "undefined") return;
@@ -28,9 +23,7 @@ function initAos() {
     });
 }
 
-/* =========================
-   REVIEWS SWIPER
-   ========================= */
+
 
 function initReviewsSlider() {
     if (typeof Swiper === "undefined") return;
@@ -73,9 +66,7 @@ function initReviewsSlider() {
     });
 }
 
-/* =========================
-   HERO SOFT PARALLAX
-   ========================= */
+
 
 function initHeroParallax() {
     const hero = document.querySelector(".home-hero");
@@ -121,9 +112,7 @@ function initHeroParallax() {
     window.addEventListener("resize", requestUpdate);
 }
 
-/* =========================
-   SOFT 3D CARD TILT
-   ========================= */
+
 
 function initHomeCardTilt() {
     const cards = document.querySelectorAll(".editorial-service-card, .review-card, .comparison-card");
@@ -156,9 +145,7 @@ function initHomeCardTilt() {
     });
 }
 
-/* =========================
-   ICON REFRESH
-   ========================= */
+
 
 function refreshHomeIcons() {
     if (window.NESTWISE && typeof window.NESTWISE.refreshIcons === "function") {
@@ -172,9 +159,7 @@ function refreshHomeIcons() {
 }
 
 
-/* =========================
-   PATHWAYS AUTO SLIDESHOW
-   ========================= */
+
 
 document.addEventListener("DOMContentLoaded", () => {
     initPathwaysSlideshow();

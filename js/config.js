@@ -1,10 +1,6 @@
 "use strict";
 
-/* ==========================================================
-   NESTWISE — GLOBAL SITE CONFIG
-   This file controls shared brand, contact, footer, legal,
-   navigation, services, page meta, FAQ, and consent content.
-   ========================================================== */
+
 
 const companyName = "Nestwise";
 

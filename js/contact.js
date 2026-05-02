@@ -1,9 +1,6 @@
 "use strict";
 
-/* ==========================================================
-   NESTWISE — CONTACT PAGE SCRIPT
-   File: /js/contact.js
-   ========================================================== */
+
 
 document.addEventListener("DOMContentLoaded", () => {
     initAos();
@@ -12,9 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     refreshContactIcons();
 });
 
-/* =========================
-   AOS
-   ========================= */
+
 
 function initAos() {
     if (typeof AOS === "undefined") return;
@@ -27,9 +22,7 @@ function initAos() {
     });
 }
 
-/* =========================
-   SOFT TILT EFFECT
-   ========================= */
+
 
 function initContactTilt() {
     const cards = document.querySelectorAll(
@@ -64,9 +57,7 @@ function initContactTilt() {
     });
 }
 
-/* =========================
-   MAP PIN MOTION
-   ========================= */
+
 
 function initContactMapMotion() {
     const mapShells = document.querySelectorAll(".map-shell");
@@ -110,9 +101,7 @@ function initContactMapMotion() {
     });
 }
 
-/* =========================
-   ICON REFRESH
-   ========================= */
+
 
 function refreshContactIcons() {
     if (window.NESTWISE && typeof window.NESTWISE.refreshIcons === "function") {

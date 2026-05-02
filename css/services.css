@@ -1,11 +1,6 @@
-/* ==========================================================
-   NESTWISE — SERVICES PAGE
-   File: /css/services.css
-   ========================================================== */
 
-/* =========================
-   SERVICES HERO
-   ========================= */
+
+
 
 .services-hero {
     position: relative;
@@ -124,9 +119,7 @@
     line-height: 1.55;
 }
 
-/* =========================
-   SERVICES GRID
-   ========================= */
+
 
 .services-grid {
     display: grid;
@@ -304,9 +297,7 @@
     transform: translateX(5px);
 }
 
-/* =========================
-   PROCESS PANEL
-   ========================= */
+
 
 .services-process {
     position: relative;
@@ -424,9 +415,7 @@
     font-size: 0.92rem;
 }
 
-/* =========================
-   EVALUATION
-   ========================= */
+
 
 .evaluation-layout {
     display: grid;
@@ -517,9 +506,7 @@
     font-size: 0.93rem;
 }
 
-/* =========================
-   INFO SWIPER
-   ========================= */
+
 
 .services-slider-section {
     overflow: hidden;
@@ -582,9 +569,7 @@
     font-size: 0.94rem;
 }
 
-/* =========================
-   SERVICES CTA
-   ========================= */
+
 
 .services-cta .final-cta {
     position: relative;
@@ -609,9 +594,7 @@
     z-index: 2;
 }
 
-/* =========================
-   RESPONSIVE
-   ========================= */
+
 
 @media (max-width: 1100px) {
 
@@ -789,10 +772,7 @@
     }
 }
 
-/* ==========================================================
-   SERVICES HERO V2 — FULL BACKGROUND + AUTO PHOTO SLIDER
-   Put at the VERY END of services.css
-   ========================================================== */
+
 
 .services-hero-v2 {
     position: relative;
@@ -892,7 +872,7 @@
     letter-spacing: 0.02em;
 }
 
-/* right side */
+
 
 .services-hero-side {
     align-self: stretch;
@@ -935,7 +915,7 @@
     line-height: 1.56;
 }
 
-/* slider */
+
 
 .services-hero-slider-wrap {
     position: relative;
@@ -1075,7 +1055,7 @@
     line-height: 1.25;
 }
 
-/* responsiveness */
+
 
 @media (max-width: 1120px) {
     .services-hero-top {
@@ -1139,10 +1119,7 @@
     }
 }
 
-/* ==========================================================
-   SERVICES HERO — BACKGROUND PHOTO SLIDESHOW
-   Put at the VERY END of services.css
-   ========================================================== */
+
 
 .services-hero-v2 {
     position: relative;
@@ -1150,7 +1127,7 @@
     background: #171411 !important;
 }
 
-/* общий фон-слайдер */
+
 .services-hero-bg-slider {
     position: absolute;
     inset: 0;
@@ -1159,7 +1136,7 @@
     pointer-events: none;
 }
 
-/* каждый background slide */
+
 .services-hero-bg-slide {
     position: absolute;
     inset: 0;
@@ -1178,7 +1155,7 @@
     transform: scale(1);
 }
 
-/* gradient поверх фото */
+
 .services-hero-bg-slider::after {
     content: "";
     position: absolute;
@@ -1197,7 +1174,7 @@
         radial-gradient(circle at 82% 78%, rgba(169, 139, 85, 0.14), transparent 24%);
 }
 
-/* сами фото */
+
 .services-bg-1 {
     background-image: url("../assets/images/services/services-hero.jpg");
 }
@@ -1222,13 +1199,13 @@
     background-image: url("../assets/images/service-pages/bird-bat-concerns-hero.jpg");
 }
 
-/* контент поверх background */
+
 .services-hero-v2 .container-wide {
     position: relative;
     z-index: 3;
 }
 
-/* можно сделать текст чуть читабельнее */
+
 .services-hero-v2 h1,
 .services-hero-v2 .services-hero-content p,
 .services-hero-side,
@@ -1238,14 +1215,14 @@
     z-index: 4;
 }
 
-/* карточки на фоне теперь чуть прозрачнее и дороже */
+
 .service-slide-card {
     background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
 
-/* mobile */
+
 @media (max-width: 760px) {
     .services-hero-bg-slider::after {
         background:
@@ -1256,10 +1233,7 @@
     }
 }
 
-/* ==========================================================
-   SERVICES INDEX — CLEAN EDITORIAL VERSION
-   Put at the VERY END of services.css
-   ========================================================== */
+
 
 .services-index {
     position: relative;
@@ -1287,7 +1261,7 @@
     z-index: 2;
 }
 
-/* head */
+
 
 .services-index-head {
     margin-bottom: clamp(26px, 4vw, 42px);
@@ -1319,7 +1293,7 @@
     line-height: 1.58;
 }
 
-/* layout */
+
 
 .services-index-layout {
     display: grid;
@@ -1328,7 +1302,7 @@
     align-items: stretch;
 }
 
-/* left photo — clean, not card-like */
+
 
 .services-index-photo {
     position: relative;
@@ -1390,7 +1364,7 @@
     letter-spacing: -0.018em;
 }
 
-/* right line index */
+
 
 .services-index-list {
     display: grid;
@@ -1515,7 +1489,7 @@
     color: var(--color-accent);
 }
 
-/* subtle paw only once */
+
 
 .services-index-list::after {
     content: "";
@@ -1544,14 +1518,14 @@
         radial-gradient(circle at 82% 38%, rgba(169, 139, 85, 0.5) 0 8px, transparent 9px);
 }
 
-/* hide old grid if previous CSS remains */
+
 
 .services-index .services-grid,
 .services-index .services-directory-board {
     display: none !important;
 }
 
-/* responsive */
+
 
 @media (max-width: 1080px) {
 
@@ -1629,10 +1603,7 @@
 }
 
 
-/* ==========================================================
-   SERVICES PROCESS V2 — EDITORIAL LINES + PAWS
-   Put at the VERY END of services.css
-   ========================================================== */
+
 
 .services-process-v2 {
     position: relative;
@@ -1648,7 +1619,7 @@
     z-index: 3;
 }
 
-/* background paws */
+
 
 .services-process-v2::before {
     content: "";
@@ -1688,7 +1659,7 @@
         radial-gradient(circle at 82% 38%, rgba(169, 139, 85, 0.5) 0 8px, transparent 9px);
 }
 
-/* head */
+
 
 .services-process-v2-head {
     display: grid;
@@ -1726,7 +1697,7 @@
     align-self: end;
 }
 
-/* list */
+
 
 .services-process-v2-list {
     display: grid;
@@ -1757,7 +1728,7 @@
     background: linear-gradient(90deg, rgba(255, 255, 255, 0.42), transparent 72%);
 }
 
-/* small paw inside rows */
+
 
 .services-process-row::after {
     content: "";
@@ -1783,7 +1754,7 @@
     transform: rotate(-8deg) translateY(-2px);
 }
 
-/* meta */
+
 
 .services-process-row-meta {
     display: grid;
@@ -1806,7 +1777,7 @@
     background: linear-gradient(90deg, rgba(169, 139, 85, 0.6), rgba(169, 139, 85, 0.08));
 }
 
-/* body */
+
 
 .services-process-row-body {
     max-width: 900px;
@@ -1831,7 +1802,7 @@
     font-weight: 600;
 }
 
-/* responsive */
+
 
 @media (max-width: 980px) {
     .services-process-v2-head {
@@ -1917,10 +1888,7 @@
     }
 }
 
-/* ==========================================================
-   SERVICES HERO V2 — COMPACT ONE-SCREEN VERSION
-   Put at the VERY END of services.css
-   ========================================================== */
+
 
 .services-hero-v2 {
     min-height: auto !important;
@@ -1938,7 +1906,7 @@
     align-items: end;
 }
 
-/* left content */
+
 
 .services-hero-v2 .services-hero-content {
     max-width: 860px !important;
@@ -1963,7 +1931,7 @@
     margin-bottom: 16px !important;
 }
 
-/* tags компактнее */
+
 
 .services-hero-tags {
     gap: 7px !important;
@@ -1975,7 +1943,7 @@
     font-size: 0.7rem !important;
 }
 
-/* right note компактнее */
+
 
 .services-hero-side {
     gap: 12px !important;
@@ -1998,7 +1966,7 @@
     line-height: 1.48 !important;
 }
 
-/* slider block */
+
 
 .services-hero-slider-wrap {
     padding-top: 0 !important;
@@ -2008,7 +1976,7 @@
     gap: 14px !important;
 }
 
-/* cards lower height */
+
 
 .service-slide-card {
     flex-basis: clamp(190px, 20vw, 250px) !important;
@@ -2042,7 +2010,7 @@
     line-height: 1.22 !important;
 }
 
-/* paw watermark on cards smaller */
+
 
 .service-slide-card::after {
     width: 46px !important;
@@ -2052,7 +2020,7 @@
     opacity: 0.14 !important;
 }
 
-/* background overlay чуть сильнее, чтобы при компактности текст читался */
+
 
 .services-hero-bg-slider::after {
     background:
@@ -2066,7 +2034,7 @@
             rgba(23, 20, 17, 0.42));
 }
 
-/* desktop height control */
+
 @media (min-width: 1180px) {
     .services-hero-v2 {
         max-height: calc(100vh - var(--header-height, 82px));
@@ -2074,7 +2042,7 @@
     }
 }
 
-/* tablet */
+
 
 @media (max-width: 1120px) {
     .services-hero-v2 {
@@ -2102,7 +2070,7 @@
     }
 }
 
-/* mobile */
+
 
 @media (max-width: 760px) {
     .services-hero-v2 {
@@ -2158,21 +2126,18 @@
 }
 
 
-/* ==========================================================
-   SERVICES INDEX HEAD — ONE-LINE TITLE + ONE-LINE TEXT
-   Put at the VERY END of services.css
-   ========================================================== */
+
 
 .services-index-head {
     margin-bottom: clamp(22px, 3vw, 34px);
 }
 
-/* убираем две колонки: заголовок сверху, текст снизу */
+
 .services-index-head-grid {
     display: block !important;
 }
 
-/* заголовок в одну строку */
+
 .services-index-head h2 {
     width: 100%;
     max-width: none !important;
@@ -2184,7 +2149,7 @@
     font-weight: 500;
 }
 
-/* параграф тоже в одну строку */
+
 .services-index-head p {
     width: 100%;
     max-width: none !important;
@@ -2195,7 +2160,7 @@
     line-height: 1.5;
 }
 
-/* на широких экранах можно чуть крупнее */
+
 @media (min-width: 1440px) {
     .services-index-head h2 {
         font-size: clamp(3rem, 3.55vw, 4.7rem) !important;
@@ -2206,7 +2171,7 @@
     }
 }
 
-/* на средних экранах уменьшаем, чтобы оставалось в одну строку */
+
 @media (max-width: 1280px) {
     .services-index-head h2 {
         font-size: clamp(2.1rem, 3vw, 3.55rem) !important;
@@ -2217,7 +2182,7 @@
     }
 }
 
-/* на планшете и мобильной разрешаем перенос, иначе будет горизонтальный скролл */
+
 @media (max-width: 1020px) {
 
     .services-index-head h2,
@@ -2247,17 +2212,14 @@
     }
 }
 
-/* ==========================================================
-   SERVICES INDEX HEAD — TITLE ONE LINE, PARAGRAPH NARROWER
-   Put at the VERY END of services.css
-   ========================================================== */
 
-/* верх секции */
+
+
 .services-index-head-grid {
     display: block !important;
 }
 
-/* заголовок пусть остаётся в одну строку на desktop */
+
 .services-index-head h2 {
     width: 100%;
     max-width: none !important;
@@ -2269,7 +2231,7 @@
     font-weight: 500;
 }
 
-/* параграф уже и может переноситься */
+
 .services-index-head p {
     width: 100%;
     max-width: 780px !important;
@@ -2280,7 +2242,7 @@
     line-height: 1.56;
 }
 
-/* на больших экранах заголовок чуть крупнее, параграф всё равно не растягиваем */
+
 @media (min-width: 1440px) {
     .services-index-head h2 {
         font-size: clamp(3rem, 3.55vw, 4.7rem) !important;
@@ -2291,7 +2253,7 @@
     }
 }
 
-/* на средних экранах заголовок уменьшаем, чтобы не ломался */
+
 @media (max-width: 1280px) {
     .services-index-head h2 {
         font-size: clamp(2rem, 3vw, 3.45rem) !important;
@@ -2302,7 +2264,7 @@
     }
 }
 
-/* планшет — уже можно переносить и заголовок */
+
 @media (max-width: 1020px) {
     .services-index-head h2 {
         max-width: 900px !important;
@@ -2317,7 +2279,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 620px) {
     .services-index-head h2 {
         font-size: clamp(2rem, 10vw, 3.25rem) !important;
@@ -2329,10 +2291,7 @@
     }
 }
 
-/* ==========================================================
-   SERVICES DETAILS RAIL — EDITORIAL SWIPER
-   Put at the VERY END of services.css
-   ========================================================== */
+
 
 .services-details-rail {
     position: relative;
@@ -2364,7 +2323,7 @@
     z-index: 2;
 }
 
-/* head */
+
 
 .details-rail-head {
     display: grid;
@@ -2393,7 +2352,7 @@
     line-height: 1.58;
 }
 
-/* swiper */
+
 
 .details-rail-swiper {
     overflow-x: hidden;
@@ -2424,7 +2383,7 @@
         linear-gradient(180deg, rgba(255, 255, 255, 0.68), rgba(255, 255, 255, 0.28));
 }
 
-/* small line detail */
+
 
 .detail-rail-slide::before {
     content: "";
@@ -2435,7 +2394,7 @@
     background: var(--color-gold);
 }
 
-/* paw watermark inside slides */
+
 
 .detail-rail-slide::after {
     content: "";
@@ -2493,7 +2452,7 @@
     font-weight: 600;
 }
 
-/* pagination */
+
 
 .details-rail-swiper .swiper-pagination {
     bottom: 0;
@@ -2511,12 +2470,12 @@
     background: var(--color-gold);
 }
 
-/* old class fallback */
+
 .services-details-rail .info-slide {
     display: none;
 }
 
-/* responsive */
+
 
 @media (max-width: 1080px) {
     .details-rail-head {

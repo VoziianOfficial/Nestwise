@@ -5,14 +5,9 @@
 @import url("./service-page.css");
 @import url("./legal.css");
 
-/* ==========================================================
-   NESTWISE — GLOBAL DESIGN SYSTEM
-   Main file: /css/style.css
-   ========================================================== */
 
-/* =========================
-   CSS VARIABLES
-   ========================= */
+
+
 
 :root {
     --color-bg: #F2EFE9;
@@ -57,9 +52,7 @@
     --transition: 260ms var(--ease);
 }
 
-/* =========================
-   RESET / BASE
-   ========================= */
+
 
 *,
 *::before,
@@ -170,9 +163,7 @@ p:last-child {
     background: var(--color-accent);
 }
 
-/* =========================
-   ACCESSIBILITY
-   ========================= */
+
 
 .skip-link {
     position: fixed;
@@ -209,9 +200,7 @@ p:last-child {
     }
 }
 
-/* =========================
-   TYPOGRAPHY
-   ========================= */
+
 
 h1,
 h2,
@@ -282,9 +271,7 @@ p {
     font-size: clamp(1rem, 1.4vw, 1.14rem);
 }
 
-/* =========================
-   LAYOUT HELPERS
-   ========================= */
+
 
 .site {
     min-height: 100vh;
@@ -371,9 +358,7 @@ p {
     color: var(--color-gold);
 }
 
-/* =========================
-   BUTTONS
-   ========================= */
+
 
 .btn,
 button.btn {
@@ -458,9 +443,7 @@ button.btn {
     transform: none;
 }
 
-/* =========================
-   HEADER
-   ========================= */
+
 
 .site-header {
     position: fixed;
@@ -722,9 +705,7 @@ button.btn {
     transform: rotate(-45deg);
 }
 
-/* =========================
-   MOBILE MENU OVERLAY
-   ========================= */
+
 
 .mobile-menu {
     position: fixed;
@@ -864,9 +845,7 @@ button.btn {
     color: var(--color-gold);
 }
 
-/* =========================
-   CARDS / MEDIA
-   ========================= */
+
 
 .lift-card {
     transition:
@@ -972,9 +951,7 @@ button.btn {
     height: 19px;
 }
 
-/* =========================
-   TIMELINE BASE
-   ========================= */
+
 
 .line-timeline {
     display: grid;
@@ -1031,9 +1008,7 @@ button.btn {
     font-size: 0.95rem;
 }
 
-/* =========================
-   FAQ ACCORDION
-   ========================= */
+
 
 .faq-list {
     display: grid;
@@ -1128,9 +1103,7 @@ button.btn {
     color: var(--color-muted);
 }
 
-/* =========================
-   FORMS
-   ========================= */
+
 
 .form-card,
 .request-card {
@@ -1271,9 +1244,7 @@ select.form-control {
     font-size: 0.84rem;
 }
 
-/* =========================
-   MODERN MAP CARD
-   ========================= */
+
 
 .map-shell {
     position: relative;
@@ -1390,9 +1361,7 @@ select.form-control {
     font-weight: 800;
 }
 
-/* =========================
-   SWIPER BASE
-   ========================= */
+
 
 .swiper {
     width: 100%;
@@ -1441,9 +1410,7 @@ select.form-control {
     box-shadow: var(--shadow-soft);
 }
 
-/* =========================
-   POLICY CONSENT BANNER
-   ========================= */
+
 
 .policy-consent {
     position: fixed;
@@ -1515,9 +1482,7 @@ select.form-control {
     font-size: 0.8rem;
 }
 
-/* =========================
-   FOOTER
-   ========================= */
+
 
 .site-footer {
     position: relative;
@@ -1636,9 +1601,7 @@ select.form-control {
     font-size: 0.8rem;
 }
 
-/* =========================
-   REVEAL ANIMATIONS
-   ========================= */
+
 
 [data-reveal] {
     opacity: 0;
@@ -1653,7 +1616,7 @@ select.form-control {
     transform: translateY(0);
 }
 
-/* AOS: keep fade elements visible and non-shifted (prevents overflow/clipping when AOS isn't active) */
+
 [data-aos^="fade"] {
     opacity: 1 !important;
     transform: none !important;
@@ -1684,9 +1647,7 @@ select.form-control {
     width: 100%;
 }
 
-/* =========================
-   RESPONSIVE
-   ========================= */
+
 
 @media (max-width: 1100px) {
     .grid-4 {
@@ -1886,10 +1847,7 @@ select.form-control {
         grid-template-columns: 1fr;
     }
 }
-/* ==========================================================
-   GLOBAL H2 TYPOGRAPHY REFINEMENT
-   lighter, more editorial, more spacious
-   ========================================================== */
+
 
 h2 {
     font-weight: 500 !important;
@@ -1897,14 +1855,14 @@ h2 {
     line-height: 1.04;
 }
 
-/* если крупные h2 слишком массивные в hero-like секциях */
+
 .section h2,
 .section-sm h2 {
     font-weight: 500 !important;
     letter-spacing: -0.025em !important;
 }
 
-/* h3 можно оставить чуть плотнее, чтобы карточки читались */
+
 h3 {
     font-weight: 600;
     letter-spacing: -0.025em;

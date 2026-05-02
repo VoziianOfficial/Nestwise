@@ -1,11 +1,6 @@
-/* ==========================================================
-   NESTWISE — CONTACT PAGE
-   File: /css/contact.css
-   ========================================================== */
 
-/* =========================
-   CONTACT HERO
-   ========================= */
+
+
 
 .contact-hero {
     position: relative;
@@ -129,9 +124,7 @@
     font-size: 0.9rem;
 }
 
-/* =========================
-   CONTACT OPTIONS
-   ========================= */
+
 
 .contact-options-grid {
     display: grid;
@@ -215,9 +208,7 @@
     line-height: 1.5;
 }
 
-/* =========================
-   CONTACT MAIN
-   ========================= */
+
 
 .contact-main-layout {
     display: grid;
@@ -270,9 +261,7 @@
     font-size: 0.9rem;
 }
 
-/* =========================
-   CONTACT STEPS
-   ========================= */
+
 
 .contact-steps {
     position: relative;
@@ -289,9 +278,7 @@
     background: linear-gradient(90deg, transparent, rgba(169, 139, 85, 0.5), transparent);
 }
 
-/* =========================
-   CONTACT FAQ
-   ========================= */
+
 
 .contact-faq .faq-layout {
     display: grid;
@@ -329,9 +316,7 @@
     max-width: none;
 }
 
-/* =========================
-   RESPONSIVE
-   ========================= */
+
 
 @media (max-width: 1100px) {
 
@@ -421,7 +406,7 @@
         min-height: 500px;
     }
 
-    /* keep FAQ inside container + compact */
+    
     .contact-faq .faq-layout {
         gap: 14px;
     }
@@ -463,10 +448,7 @@
     }
 }
 
-/* ==========================================================
-   CONTACT HERO — CLEAN BACKGROUND PHOTO
-   Put at the VERY END of contact.css
-   ========================================================== */
+
 
 .contact-hero-clean {
     position: relative;
@@ -479,7 +461,7 @@
     background: var(--color-dark);
 }
 
-/* background photo */
+
 .contact-hero-clean-bg {
     position: absolute;
     inset: 0;
@@ -502,7 +484,7 @@
     z-index: 2;
 }
 
-/* layout */
+
 .contact-hero-clean-layout {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
@@ -510,7 +492,7 @@
     align-items: end;
 }
 
-/* content */
+
 .contact-hero-clean-content {
     max-width: 900px;
 }
@@ -547,7 +529,7 @@
     gap: 12px;
 }
 
-/* right simple note */
+
 .contact-hero-clean-note {
     padding-left: 20px;
     border-left: 1px solid rgba(255, 255, 255, 0.22);
@@ -592,7 +574,7 @@
     background: var(--color-gold);
 }
 
-/* bottom strip */
+
 .contact-hero-clean-strip {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -636,13 +618,13 @@
     line-height: 1.38;
 }
 
-/* hide old card if old structure remains */
+
 .contact-hero-clean .contact-hero-card,
 .contact-hero-clean .contact-hero-layout {
     display: none !important;
 }
 
-/* responsive */
+
 @media (max-width: 980px) {
     .contact-hero-clean-layout {
         grid-template-columns: 1fr;
@@ -696,10 +678,7 @@
     }
 }
 
-/* ==========================================================
-   CONTACT OPTIONS — LINE STRIP
-   Put at the VERY END of contact.css
-   ========================================================== */
+
 
 .contact-options-line {
     position: relative;
@@ -882,13 +861,13 @@
     color: var(--color-accent);
 }
 
-/* отключаем старые карточки, если старые стили остались */
+
 .contact-options-line .contact-options-grid,
 .contact-options-line .contact-option-card {
     display: none !important;
 }
 
-/* Responsive */
+
 
 @media (max-width: 980px) {
     .contact-options-line-head {
@@ -932,10 +911,7 @@
     }
 }
 
-/* ==========================================================
-   CONTACT OPTIONS — HEAD CENTERED FIX
-   Put at the VERY END of contact.css
-   ========================================================== */
+
 
 .contact-options-line-head {
     display: grid !important;
@@ -973,19 +949,13 @@
     letter-spacing: -0.01em !important;
 }
 
-/* ==========================================================
-   CONTACT OPTIONS — TOP SPACING
-   Put at the VERY END of contact.css
-   ========================================================== */
+
 
 .contact-options.contact-options-line.section-sm {
     margin-top: clamp(18px, 2.4vw, 34px) !important;
 }
 
-/* ==========================================================
-   CONTACT REQUEST EQUAL — COMPACT FORM + REAL MAP
-   Put at the VERY END of contact.css
-   ========================================================== */
+
 
 .contact-request-equal {
     position: relative;
@@ -1001,7 +971,7 @@
     max-width: min(100% - 32px, 1240px);
 }
 
-/* head */
+
 
 .contact-request-equal-head {
     display: grid;
@@ -1035,7 +1005,7 @@
     line-height: 1.46;
 }
 
-/* equal layout */
+
 
 .contact-request-equal-body {
     display: grid;
@@ -1064,9 +1034,7 @@
     box-shadow: 0 20px 54px rgba(31, 26, 21, 0.09);
 }
 
-/* ==========================================================
-   CONTACT REQUEST — REQUEST LINES FORM (HOME PARITY)
-   ========================================================== */
+
 
 .contact-request-form-panel {
     padding: 0;
@@ -1226,7 +1194,7 @@
     }
 }
 
-/* form */
+
 
 .contact-equal-form {
     display: flex;
@@ -1303,7 +1271,7 @@
     box-shadow: 0 0 0 4px rgba(169, 139, 85, 0.12);
 }
 
-/* form bottom */
+
 
 .contact-equal-form-bottom {
     display: flex;
@@ -1328,7 +1296,7 @@
     font-size: 0.76rem;
 }
 
-/* map panel */
+
 
 .contact-request-map-panel {
     display: grid;
@@ -1388,7 +1356,7 @@
     line-height: 1.36;
 }
 
-/* stop old contact main styles from affecting this section */
+
 
 .contact-request-equal .contact-main-layout,
 .contact-request-equal .map-shell,
@@ -1397,10 +1365,10 @@
     all: unset;
 }
 
-/* responsive */
+
 
 @media (max-width: 1080px) {
-    /* keep the desktop 2-column layout on tablets, just more compact */
+    
 
     .contact-request-equal {
         padding-top: 26px;

@@ -1,9 +1,6 @@
 "use strict";
 
-/* ==========================================================
-   NESTWISE — SERVICES PAGE SCRIPT
-   File: /js/services.js
-   ========================================================== */
+
 
 document.addEventListener("DOMContentLoaded", () => {
     initAos();
@@ -13,9 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     refreshServicesIcons();
 });
 
-/* =========================
-   AOS
-   ========================= */
+
 
 function initAos() {
     if (typeof AOS === "undefined") return;
@@ -28,10 +23,7 @@ function initAos() {
     });
 }
 
-/* =========================
-   SERVICES HERO
-   Background + cards slideshow
-   ========================= */
+
 
 function initServicesHeroSlider() {
     const section = document.querySelector(".services-hero-v2");
@@ -125,10 +117,7 @@ function initServicesHeroSlider() {
     });
 }
 
-/* =========================
-   SERVICE INFO SWIPER
-   Common request details rail
-   ========================= */
+
 
 function initServiceInfoSlider() {
     if (typeof Swiper === "undefined") return;
@@ -167,10 +156,7 @@ function initServiceInfoSlider() {
     });
 }
 
-/* =========================
-   SOFT HOVER MOVEMENT
-   лёгкий эффект, без сильного 3D
-   ========================= */
+
 
 function initServicesSoftHover() {
     const items = document.querySelectorAll(
@@ -207,9 +193,7 @@ function initServicesSoftHover() {
     });
 }
 
-/* =========================
-   ICON REFRESH
-   ========================= */
+
 
 function refreshServicesIcons() {
     if (window.NESTWISE && typeof window.NESTWISE.refreshIcons === "function") {

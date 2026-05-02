@@ -1,11 +1,6 @@
-/* ==========================================================
-   NESTWISE — ABOUT PAGE
-   File: /css/about.css
-   ========================================================== */
 
-/* =========================
-   ABOUT HERO
-   ========================= */
+
+
 
 .about-hero {
     position: relative;
@@ -180,9 +175,7 @@
     line-height: 1.35;
 }
 
-/* =========================
-   STORY
-   ========================= */
+
 
 .about-story-layout {
     display: grid;
@@ -226,9 +219,7 @@
     letter-spacing: -0.035em;
 }
 
-/* =========================
-   MODEL SPLIT
-   ========================= */
+
 
 .about-model-grid {
     display: grid;
@@ -301,9 +292,7 @@
     color: rgba(255, 255, 255, 0.68);
 }
 
-/* =========================
-   VALUES
-   ========================= */
+
 
 .about-values-grid {
     display: grid;
@@ -420,9 +409,7 @@
     color: var(--color-surface);
 }
 
-/* =========================
-   HELP SECTION
-   ========================= */
+
 
 .about-help-layout {
     display: grid;
@@ -546,9 +533,7 @@
     font-size: 0.94rem;
 }
 
-/* =========================
-   DISCLAIMER
-   ========================= */
+
 
 .about-disclaimer-card {
     display: grid;
@@ -586,9 +571,7 @@
     color: rgba(255, 255, 255, 0.68);
 }
 
-/* =========================
-   RESPONSIVE
-   ========================= */
+
 
 @media (max-width: 1100px) {
 
@@ -745,10 +728,7 @@
     }
 }
 
-/* ==========================================================
-   ABOUT HERO — FULL PHOTO EDITORIAL
-   Background photo, no cards, luxury editorial style
-   ========================================================== */
+
 
 .about-hero-photo-editorial {
     position: relative;
@@ -768,7 +748,7 @@
     min-height: inherit;
 }
 
-/* full background photo */
+
 
 .about-photo-bg {
     position: absolute;
@@ -779,7 +759,7 @@
     transform: scale(1.035);
 }
 
-/* dark/luxury overlay for readability */
+
 
 .about-photo-overlay {
     position: absolute;
@@ -797,7 +777,7 @@
             rgba(23, 20, 17, 0.48) 100%);
 }
 
-/* big editorial word */
+
 
 .about-photo-word {
     position: absolute;
@@ -816,7 +796,7 @@
     user-select: none;
 }
 
-/* soft paw watermark */
+
 
 .about-hero-photo-editorial::before {
     content: "";
@@ -837,7 +817,7 @@
         radial-gradient(circle at 82% 38%, rgba(169, 139, 85, 0.62) 0 11px, transparent 12px);
 }
 
-/* top editorial line */
+
 
 .about-photo-topline {
     display: inline-flex;
@@ -859,7 +839,7 @@
     background: rgba(255, 255, 255, 0.28);
 }
 
-/* main layout */
+
 
 .about-photo-layout {
     display: grid;
@@ -869,7 +849,7 @@
     flex: 1;
 }
 
-/* text directly on background, no card */
+
 
 .about-photo-content {
     max-width: 890px;
@@ -909,7 +889,7 @@
     gap: 12px;
 }
 
-/* right rail, no card */
+
 
 .about-photo-rail {
     align-self: end;
@@ -935,7 +915,7 @@
     line-height: 1.58;
 }
 
-/* bottom line info */
+
 
 .about-photo-bottom {
     display: grid;
@@ -980,7 +960,7 @@
     line-height: 1.4;
 }
 
-/* hover polish */
+
 
 .about-photo-rail,
 .about-photo-bottom div {
@@ -994,7 +974,7 @@
     transform: translateY(-3px);
 }
 
-/* hide previous about hero structures if CSS remains */
+
 
 .about-hero-photo-editorial .about-hero-layout,
 .about-hero-photo-editorial .about-portrait-card,
@@ -1003,7 +983,7 @@
     display: none !important;
 }
 
-/* responsive */
+
 
 @media (max-width: 1100px) {
     .about-hero-photo-editorial {
@@ -1109,10 +1089,7 @@
     }
 }
 
-/* ==========================================================
-   ABOUT HERO PHOTO EDITORIAL — COMPACT ONE-SCREEN PATCH
-   Put at the VERY END of about.css
-   ========================================================== */
+
 
 .about-hero-photo-editorial {
     min-height: calc(100vh - var(--header-height, 82px)) !important;
@@ -1120,25 +1097,25 @@
     padding-bottom: clamp(18px, 2.4vw, 30px) !important;
 }
 
-/* делаем внутреннюю высоту более управляемой */
+
 .about-hero-photo-editorial .container-wide {
     min-height: calc(100vh - var(--header-height, 82px) - 50px) !important;
 }
 
-/* верхнюю маленькую строку делаем компактнее */
+
 .about-photo-topline {
     margin-bottom: clamp(18px, 2.6vw, 34px) !important;
     font-size: 0.62rem !important;
 }
 
-/* поднимаем основной layout вверх */
+
 .about-photo-layout {
     align-items: center !important;
     flex: 0.82 !important;
     transform: translateY(-28px);
 }
 
-/* текст компактнее */
+
 .about-photo-content {
     padding-bottom: 0 !important;
 }
@@ -1157,7 +1134,7 @@
     line-height: 1.56 !important;
 }
 
-/* правая колонка тоже выше и компактнее */
+
 .about-photo-rail {
     align-self: center !important;
     padding-bottom: 0 !important;
@@ -1168,7 +1145,7 @@
     line-height: 1.52 !important;
 }
 
-/* нижняя линия компактнее */
+
 .about-photo-bottom {
     margin-top: 0 !important;
     padding-top: 14px !important;
@@ -1189,12 +1166,12 @@
     line-height: 1.32 !important;
 }
 
-/* большое слово чуть ниже/мягче, чтобы не мешало */
+
 .about-photo-word {
     bottom: clamp(16px, 3vw, 34px) !important;
 }
 
-/* desktop: контролируем, чтобы точно помещалось */
+
 @media (min-width: 1101px) {
     .about-hero-photo-editorial {
         max-height: calc(100vh - var(--header-height, 82px));
@@ -1205,7 +1182,7 @@
     }
 }
 
-/* tablet */
+
 @media (max-width: 1100px) {
     .about-hero-photo-editorial {
         min-height: auto !important;
@@ -1224,7 +1201,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 760px) {
     .about-hero-photo-editorial {
         padding-top: 24px !important;
@@ -1250,11 +1227,7 @@
 }
 
 
-/* ==========================================================
-   ABOUT STORY V3 — PHOTO CHAPTER ROWS
-   3 photos left, text opposite right
-   Put at the VERY END of about.css
-   ========================================================== */
+
 
 .about-story-v3 {
     position: relative;
@@ -1289,7 +1262,7 @@
     z-index: 2;
 }
 
-/* top section title */
+
 
 .about-story-v3-head {
     display: grid;
@@ -1323,7 +1296,7 @@
     line-height: 1.6;
 }
 
-/* rows */
+
 
 .story-photo-chapters {
     display: grid;
@@ -1356,7 +1329,7 @@
     opacity: 1;
 }
 
-/* left photo */
+
 
 .story-row-photo {
     position: relative;
@@ -1416,7 +1389,7 @@
     transform: scale(1.06);
 }
 
-/* text */
+
 
 .story-row-content {
     position: relative;
@@ -1443,7 +1416,7 @@
     line-height: 1.66;
 }
 
-/* small paw near last row */
+
 
 .story-photo-row:nth-child(3)::after {
     content: "";
@@ -1463,13 +1436,13 @@
         radial-gradient(circle at 82% 38%, rgba(169, 139, 85, 0.52) 0 7px, transparent 8px);
 }
 
-/* bottom flow */
+
 
 .story-flow-line-v3 {
     margin-top: 22px;
 }
 
-/* отключаем старые версии story, если CSS остался */
+
 
 .about-story-v3 .about-story-layout,
 .about-story-v3 .about-story-v2-layout,
@@ -1478,7 +1451,7 @@
     display: none !important;
 }
 
-/* responsive */
+
 
 @media (max-width: 980px) {
     .about-story-v3-head {
@@ -1537,10 +1510,7 @@
     }
 }
 
-/* ==========================================================
-   ABOUT STORY V3 — MEDIUM COMPACT VERSION
-   Put at the VERY END of about.css
-   ========================================================== */
+
 
 .about-story.about-story-v3.section {
     margin-top: clamp(18px, 2.5vw, 34px);
@@ -1551,12 +1521,12 @@
     padding-bottom: clamp(30px, 4vw, 52px) !important;
 }
 
-/* не делаем секцию узкой */
+
 .about-story-v3 .container-wide {
     max-width: min(100% - 32px, 1480px);
 }
 
-/* верхний заголовок компактнее */
+
 .about-story-v3-head {
     margin-bottom: clamp(18px, 2.8vw, 28px) !important;
     padding-bottom: clamp(14px, 2vw, 20px) !important;
@@ -1575,20 +1545,20 @@
     line-height: 1.5 !important;
 }
 
-/* строки истории ниже и аккуратнее */
+
 .story-photo-row {
     grid-template-columns: minmax(280px, 0.36fr) minmax(0, 1fr) !important;
     gap: clamp(22px, 4.8vw, 72px) !important;
     padding: clamp(16px, 2.6vw, 26px) 0 !important;
 }
 
-/* фото чуть ниже по высоте, но не маленькие */
+
 .story-row-photo {
     width: min(100%, 410px) !important;
     height: clamp(122px, 10.5vw, 165px) !important;
 }
 
-/* убираем слишком сильные сдвиги, чтобы компактнее */
+
 .story-photo-row:nth-child(2) .story-row-photo {
     margin-left: clamp(12px, 2.4vw, 34px) !important;
 }
@@ -1597,7 +1567,7 @@
     margin-left: clamp(6px, 1.6vw, 20px) !important;
 }
 
-/* текст плотнее */
+
 .story-chapter-label {
     margin-bottom: 7px !important;
     font-size: 0.62rem !important;
@@ -1616,7 +1586,7 @@
     line-height: 1.54 !important;
 }
 
-/* нижняя линия компактнее */
+
 .story-flow-line-v3 {
     margin-top: 14px !important;
 }
@@ -1625,7 +1595,7 @@
     font-size: 0.68rem !important;
 }
 
-/* лапки чуть меньше, чтобы не занимали визуально много места */
+
 .about-story-v3::before {
     width: 96px !important;
     height: 84px !important;
@@ -1638,7 +1608,7 @@
     opacity: 0.1 !important;
 }
 
-/* desktop: помогает секции помещаться в один экран */
+
 @media (min-width: 1180px) {
     .about-story-v3 {
         min-height: auto;
@@ -1649,7 +1619,7 @@
     }
 }
 
-/* tablet */
+
 @media (max-width: 980px) {
     .story-photo-row {
         grid-template-columns: 1fr !important;
@@ -1665,7 +1635,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 760px) {
     .about-story.about-story-v3.section {
         margin-top: 18px;
@@ -1703,10 +1673,7 @@
 }
 
 
-/* ==========================================================
-   ABOUT MODEL — BOUNDARY SECTION
-   Put at the VERY END of about.css
-   ========================================================== */
+
 
 .about-model-boundary {
     position: relative;
@@ -1743,7 +1710,7 @@
     z-index: 2;
 }
 
-/* Head */
+
 
 .model-boundary-head {
     display: grid;
@@ -1777,7 +1744,7 @@
     line-height: 1.6;
 }
 
-/* Layout */
+
 
 .model-boundary-layout {
     position: relative;
@@ -1787,7 +1754,7 @@
     align-items: stretch;
 }
 
-/* Center divider */
+
 
 .model-boundary-divider {
     position: relative;
@@ -1814,7 +1781,7 @@
     }
 }
 
-/* Columns */
+
 
 .model-boundary-column {
     position: relative;
@@ -1844,7 +1811,7 @@
     letter-spacing: -0.012em;
 }
 
-/* Large ghost words */
+
 
 .model-boundary-column::before {
     position: absolute;
@@ -1868,7 +1835,7 @@
     content: "limits";
 }
 
-/* Lists */
+
 
 .model-boundary-list {
     display: grid;
@@ -1910,7 +1877,7 @@
     opacity: 1;
 }
 
-/* Small paw inside lists */
+
 
 .model-boundary-list li:nth-child(2)::after,
 .model-boundary-list li:nth-child(4)::after {
@@ -1931,7 +1898,7 @@
         radial-gradient(circle at 82% 38%, rgba(169, 139, 85, 0.55) 0 5px, transparent 6px);
 }
 
-/* Icons */
+
 
 .model-boundary-icon {
     display: grid;
@@ -1972,7 +1939,7 @@
     background: var(--color-gold);
 }
 
-/* Text */
+
 
 .model-boundary-list h3 {
     margin: 0 0 5px;
@@ -1992,7 +1959,7 @@
     line-height: 1.52;
 }
 
-/* Bottom note */
+
 
 .model-boundary-note {
     display: grid;
@@ -2019,14 +1986,14 @@
     line-height: 1.58;
 }
 
-/* Hide old grid if old CSS remains */
+
 
 .about-model-boundary .about-model-grid,
 .about-model-boundary .about-model-card {
     display: none !important;
 }
 
-/* Responsive */
+
 
 @media (max-width: 980px) {
 
@@ -2102,10 +2069,7 @@
     }
 }
 
-/* ==========================================================
-   ABOUT MODEL BOUNDARY — COMPACT ONE-SCREEN PATCH
-   Put at the VERY END of about.css
-   ========================================================== */
+
 
 .about-model.about-model-boundary.section {
     margin-top: clamp(16px, 2vw, 28px) !important;
@@ -2116,12 +2080,12 @@
     padding-bottom: clamp(28px, 3.6vw, 48px) !important;
 }
 
-/* не сужаем секцию */
+
 .about-model-boundary .container-wide {
     max-width: min(100% - 32px, 1480px);
 }
 
-/* head compact */
+
 .model-boundary-head {
     margin-bottom: clamp(18px, 2.6vw, 26px) !important;
     padding-bottom: clamp(14px, 2vw, 20px) !important;
@@ -2140,12 +2104,12 @@
     line-height: 1.5 !important;
 }
 
-/* layout compact */
+
 .model-boundary-layout {
     gap: clamp(18px, 3vw, 38px) !important;
 }
 
-/* labels */
+
 .model-boundary-label {
     gap: 6px !important;
     margin-bottom: 12px !important;
@@ -2159,13 +2123,13 @@
     font-size: clamp(1.55rem, 2.4vw, 2.55rem) !important;
 }
 
-/* ghost words меньше */
+
 .model-boundary-column::before {
     font-size: clamp(3.2rem, 7vw, 6.2rem) !important;
     opacity: 0.75;
 }
 
-/* list rows compact */
+
 .model-boundary-list li {
     grid-template-columns: 34px minmax(0, 1fr) !important;
     gap: 12px !important;
@@ -2176,7 +2140,7 @@
     padding-left: 6px !important;
 }
 
-/* icons compact */
+
 .model-boundary-icon {
     width: 34px !important;
     height: 34px !important;
@@ -2188,7 +2152,7 @@
     height: 16px !important;
 }
 
-/* text compact */
+
 .model-boundary-list h3 {
     margin-bottom: 3px !important;
     font-size: 0.88rem !important;
@@ -2201,7 +2165,7 @@
     line-height: 1.42 !important;
 }
 
-/* лапки меньше */
+
 .about-model-boundary::before {
     width: 92px !important;
     height: 80px !important;
@@ -2215,7 +2179,7 @@
     opacity: 0.075 !important;
 }
 
-/* bottom note compact */
+
 .model-boundary-note {
     grid-template-columns: minmax(160px, 0.22fr) minmax(0, 1fr) !important;
     gap: clamp(16px, 3vw, 36px) !important;
@@ -2233,12 +2197,12 @@
     line-height: 1.48 !important;
 }
 
-/* divider calmer */
+
 .model-boundary-divider span {
     height: 34% !important;
 }
 
-/* desktop one-screen helper */
+
 @media (min-width: 1180px) {
     .about-model-boundary {
         min-height: auto;
@@ -2249,7 +2213,7 @@
     }
 }
 
-/* tablet */
+
 @media (max-width: 980px) {
     .about-model-boundary .container-wide {
         max-width: min(100% - 28px, 1480px);
@@ -2275,7 +2239,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 760px) {
     .about-model-boundary {
         padding-top: 34px !important;
@@ -2315,10 +2279,7 @@
     }
 }
 
-/* ==========================================================
-   ABOUT MODEL BOUNDARY — REMOVE TOP MARGIN
-   Put at the VERY END of about.css
-   ========================================================== */
+
 
 .about-model.about-model-boundary.section {
     margin-top: 0 !important;
@@ -2328,10 +2289,7 @@
     margin-top: 0 !important;
 }
 
-/* ==========================================================
-   ABOUT VALUES — WILDLIFE ORBS
-   Put at the VERY END of about.css
-   ========================================================== */
+
 
 .about-values-orbs {
     position: relative;
@@ -2367,7 +2325,7 @@
     z-index: 2;
 }
 
-/* head */
+
 
 .about-values-orbs-head {
     max-width: 980px;
@@ -2391,7 +2349,7 @@
     line-height: 1.58;
 }
 
-/* stage */
+
 
 .about-values-orbs-stage {
     position: relative;
@@ -2412,7 +2370,7 @@
     pointer-events: none;
 }
 
-/* center */
+
 
 .values-orb-center {
     position: absolute;
@@ -2448,7 +2406,7 @@
     line-height: 1.35;
 }
 
-/* orb */
+
 
 .values-orb {
     position: absolute;
@@ -2533,7 +2491,7 @@
     overflow: hidden;
 }
 
-/* positions */
+
 
 .values-orb-attic {
     left: 3%;
@@ -2571,7 +2529,7 @@
         url("../assets/images/about/bird-bat-animal.jpg");
 }
 
-/* subtle motion */
+
 
 .values-orb-attic,
 .values-orb-squirrel {
@@ -2597,12 +2555,12 @@
     }
 }
 
-/* hover priority over animation */
+
 .values-orb:hover {
     animation-play-state: paused;
 }
 
-/* responsive */
+
 
 @media (max-width: 1100px) {
     .about-values-orbs-head h2 {
@@ -2692,12 +2650,9 @@
 }
 
 
-/* ==========================================================
-   ABOUT VALUES ORBS — BRIGHTER HOVERS + LINE MOTION
-   Put at the VERY END of about.css
-   ========================================================== */
 
-/* линия становится живее */
+
+
 .values-orbs-line {
     overflow: visible;
 }
@@ -2720,7 +2675,7 @@
     transition: opacity 350ms ease;
 }
 
-/* при наведении на всю область линия подсвечивается */
+
 .about-values-orbs-stage:hover .values-orbs-line {
     background: linear-gradient(90deg,
             rgba(169, 139, 85, 0.16),
@@ -2748,7 +2703,7 @@
     }
 }
 
-/* круги — ярче, дороже, с золотым свечением */
+
 .values-orb {
     outline: 0 solid rgba(169, 139, 85, 0);
     transition:
@@ -2770,7 +2725,7 @@
         0 0 46px rgba(169, 139, 85, 0.24);
 }
 
-/* затемнение красивее, текст читабельнее */
+
 .values-orb:hover::before {
     opacity: 1;
     background:
@@ -2779,13 +2734,13 @@
         linear-gradient(90deg, rgba(23, 20, 17, 0.24), rgba(23, 20, 17, 0.06));
 }
 
-/* внутренняя тонкая рамка тоже оживает */
+
 .values-orb:hover::after {
     border-color: rgba(255, 255, 255, 0.58);
     box-shadow: inset 0 0 26px rgba(255, 255, 255, 0.08);
 }
 
-/* текст чуть поднимается и становится выразительнее */
+
 .values-orb-inner {
     transition:
         transform 450ms var(--ease),
@@ -2818,7 +2773,7 @@
     text-shadow: 0 10px 28px rgba(0, 0, 0, 0.34);
 }
 
-/* центральный блок тоже реагирует, когда наводишься на область */
+
 .values-orb-center {
     transition:
         transform 450ms var(--ease),
@@ -2836,7 +2791,7 @@
         0 0 34px rgba(169, 139, 85, 0.12);
 }
 
-/* маленькое свечение у каждого круга */
+
 .values-orb::marker {
     display: none;
 }
@@ -2861,19 +2816,19 @@
     box-shadow: 0 0 18px rgba(255, 255, 255, 0.22);
 }
 
-/* при наведении на конкретный круг — остальные чуть спокойнее */
+
 .about-values-orbs-stage:has(.values-orb:hover) .values-orb:not(:hover) {
     opacity: 0.72;
     filter: saturate(0.86) contrast(0.96);
     transform: scale(0.985);
 }
 
-/* активный круг остается поверх всех */
+
 .values-orb:hover {
     z-index: 8;
 }
 
-/* mobile: hover мягче, чтобы не было перегруза */
+
 @media (max-width: 760px) {
     .values-orb:hover {
         transform: translateY(-6px) scale(1.025);
@@ -2890,7 +2845,7 @@
     }
 }
 
-/* reduced motion */
+
 @media (prefers-reduced-motion: reduce) {
     .about-values-orbs-stage:hover .values-orbs-line::before {
         animation: none;
@@ -2903,11 +2858,7 @@
 }
 
 
-/* ==========================================================
-   ABOUT HELP — DETAIL LEDGER
-   Compact, clean, no cards
-   Put at the VERY END of about.css
-   ========================================================== */
+
 
 .about-help-ledger {
     position: relative;
@@ -2943,7 +2894,7 @@
     max-width: min(100% - 32px, 1440px);
 }
 
-/* head */
+
 
 .help-ledger-head {
     display: grid;
@@ -2977,7 +2928,7 @@
     line-height: 1.54;
 }
 
-/* layout */
+
 
 .help-ledger-layout {
     display: grid;
@@ -2986,7 +2937,7 @@
     align-items: stretch;
 }
 
-/* image strip */
+
 
 .help-ledger-visual {
     position: relative;
@@ -3051,7 +3002,7 @@
     letter-spacing: -0.01em;
 }
 
-/* right ledger */
+
 
 .help-ledger-list {
     display: grid;
@@ -3146,7 +3097,7 @@
     letter-spacing: -0.01em;
 }
 
-/* отключаем старую структуру, если вдруг осталась внутри новой секции */
+
 
 .about-help-ledger .about-help-layout,
 .about-help-ledger .about-help-media,
@@ -3155,7 +3106,7 @@
     display: none !important;
 }
 
-/* responsive */
+
 
 @media (max-width: 980px) {
 

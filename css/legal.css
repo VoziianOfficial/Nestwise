@@ -1,11 +1,6 @@
-/* ==========================================================
-   NESTWISE — LEGAL PAGES
-   File: /css/legal.css
-   ========================================================== */
 
-/* =========================
-   LEGAL HERO
-   ========================= */
+
+
 
 .legal-hero {
     position: relative;
@@ -87,9 +82,7 @@
     font-weight: 800;
 }
 
-/* =========================
-   LEGAL LAYOUT
-   ========================= */
+
 
 .legal-layout {
     display: grid;
@@ -182,9 +175,7 @@
     line-height: 1.5;
 }
 
-/* =========================
-   LEGAL CONTENT
-   ========================= */
+
 
 .legal-content {
     display: grid;
@@ -271,9 +262,7 @@
     font-size: 0.9rem;
 }
 
-/* =========================
-   RESPONSIVE
-   ========================= */
+
 
 @media (max-width: 980px) {
     .legal-layout {

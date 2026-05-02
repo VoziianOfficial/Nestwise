@@ -1,9 +1,6 @@
 "use strict";
 
-/* ==========================================================
-   NESTWISE — LEGAL PAGES SCRIPT
-   File: /js/legal.js
-   ========================================================== */
+
 
 document.addEventListener("DOMContentLoaded", () => {
     initAos();
@@ -13,9 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     refreshLegalIcons();
 });
 
-/* =========================
-   AOS
-   ========================= */
+
 
 function initAos() {
     if (typeof AOS === "undefined") return;
@@ -28,9 +23,7 @@ function initAos() {
     });
 }
 
-/* =========================
-   ACTIVE LEGAL NAV
-   ========================= */
+
 
 function initLegalActiveNav() {
     const pageName = window.location.pathname.split("/").pop() || "index.html";
@@ -47,9 +40,7 @@ function initLegalActiveNav() {
     });
 }
 
-/* =========================
-   SMOOTH INTERNAL ANCHORS
-   ========================= */
+
 
 function initLegalSmoothAnchors() {
     const links = document.querySelectorAll('a[href^="#"]');
@@ -74,9 +65,7 @@ function initLegalSmoothAnchors() {
     });
 }
 
-/* =========================
-   SOFT CARD MOTION
-   ========================= */
+
 
 function initLegalCardMotion() {
     const cards = document.querySelectorAll(
@@ -111,9 +100,7 @@ function initLegalCardMotion() {
     });
 }
 
-/* =========================
-   ICON REFRESH
-   ========================= */
+
 
 function refreshLegalIcons() {
     if (window.NESTWISE && typeof window.NESTWISE.refreshIcons === "function") {

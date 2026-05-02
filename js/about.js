@@ -1,9 +1,6 @@
 "use strict";
 
-/* ==========================================================
-   NESTWISE — ABOUT PAGE SCRIPT
-   File: /js/about.js
-   ========================================================== */
+
 
 document.addEventListener("DOMContentLoaded", () => {
     initAos();
@@ -12,9 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     refreshAboutIcons();
 });
 
-/* =========================
-   AOS
-   ========================= */
+
 
 function initAos() {
     if (typeof AOS === "undefined") return;
@@ -27,9 +22,7 @@ function initAos() {
     });
 }
 
-/* =========================
-   SOFT CARD TILT
-   ========================= */
+
 
 function initAboutTilt() {
     const cards = document.querySelectorAll(
@@ -64,9 +57,7 @@ function initAboutTilt() {
     });
 }
 
-/* =========================
-   SOFT IMAGE PARALLAX
-   ========================= */
+
 
 function initAboutParallax() {
     const visualItems = document.querySelectorAll(".about-portrait-card img, .about-help-media img");
@@ -114,9 +105,7 @@ function initAboutParallax() {
     window.addEventListener("resize", requestUpdate);
 }
 
-/* =========================
-   ICON REFRESH
-   ========================= */
+
 
 function refreshAboutIcons() {
     if (window.NESTWISE && typeof window.NESTWISE.refreshIcons === "function") {
