@@ -437,25 +437,5 @@ window.SITE_CONFIG = {
             "Independent provider comparison",
             "Homeowner verification reminders"
         ]
-    },
-
-    safeContentRules: {
-        avoid: [
-            "we remove animals",
-            "our technicians",
-            "licensed and insured team",
-            "emergency removal by us",
-            "guaranteed removal",
-            "years of experience",
-            "projects completed"
-        ],
-        use: [
-            "compare local provider options",
-            "connect with independent providers",
-            "request matching",
-            "provider availability may vary",
-            "homeowners should verify licenses, insurance, and qualifications",
-            "Nestwise does not perform wildlife removal services directly"
-        ]
     }
 };
