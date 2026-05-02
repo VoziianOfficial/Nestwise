@@ -34,6 +34,10 @@
         emailText: "[data-email-text]",
         emailLink: "[data-email-link]",
         addressText: "[data-address-text]",
+        mailingOfficeLabel: "[data-mailing-office-label]",
+        mailingOfficeAddress: "[data-mailing-office-address]",
+        mailingOfficeNote: "[data-mailing-office-note]",
+        mailingOfficeMap: "[data-mailing-office-map]",
         serviceArea: "[data-service-area]",
         footerText: "[data-footer-text]",
         disclaimer: "[data-disclaimer]",
@@ -406,6 +410,9 @@
         setText(selectors.disclaimer, config.disclaimer);
         setText(selectors.aggregatorNotice, config.aggregatorNotice);
         setText(selectors.legalNotice, config.disclaimer);
+        setText(selectors.mailingOfficeLabel, config.mailingOffice?.label || "Mailing office");
+        setText(selectors.mailingOfficeAddress, config.mailingOffice?.address || "");
+        setText(selectors.mailingOfficeNote, config.mailingOffice?.note || "");
 
         document.querySelectorAll(selectors.phoneLink).forEach((link) => {
             link.setAttribute("href", `tel:${config.phoneHref}`);
@@ -414,6 +421,12 @@
         document.querySelectorAll(selectors.emailLink).forEach((link) => {
             link.setAttribute("href", `mailto:${config.email}`);
         });
+
+        if (config.mailingOffice?.mapEmbedUrl) {
+            document.querySelectorAll(selectors.mailingOfficeMap).forEach((frame) => {
+                frame.setAttribute("src", config.mailingOffice.mapEmbedUrl);
+            });
+        }
     }
 
     function setText(selector, value) {

@@ -36,6 +36,15 @@ window.SITE_CONFIG = {
         full: "Independent provider matching platform, United States"
     },
 
+    mailingOffice: {
+        label: "Mailing office",
+        address: "600 Congress Avenue, Austin, TX 78701",
+        note:
+            "This address is for platform correspondence. We support independent provider matching across U.S. service areas.",
+        mapEmbedUrl:
+            "https://www.google.com/maps?q=600%20Congress%20Avenue%2C%20Austin%2C%20TX%2078701%2C%20USA&output=embed"
+    },
+
     serviceArea: "Independent wildlife provider matching across the United States",
 
     footerText:
